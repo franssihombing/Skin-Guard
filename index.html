@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkinGuard 🐻 – Your Skin's Best Friend!</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <style>
 :root {
   --mint:    #2979ff;
@@ -21,21 +22,48 @@
   --white:   #ffffff;
   --dark:    #0a0e1a;
   --text:    #1a2340;
-  --muted:   #5a6890;
+  --muted:   #42506f;
+  --ink-on-light: #14213d;
+  --ink-on-dark: #ffffff;
   --card-r:  20px;
-  --shadow:  0 8px 32px rgba(10,20,80,0.10);
-  --shadow-pop: 0 12px 40px rgba(10,20,80,0.20);
+  --shadow:  0 18px 45px rgba(15, 37, 84, 0.10);
+  --shadow-pop: 0 24px 60px rgba(15, 37, 84, 0.16);
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: var(--cream);
   color: var(--text);
   overflow-x: hidden;
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='8' r='6' fill='%232979ff' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 8 8, auto;
+  line-height: 1.6;
+}
+
+img.emoji-icon {
+  width: 1.1em;
+  height: 1.1em;
+  margin: 0 0.08em;
+  vertical-align: -0.16em;
+  display: inline-block;
+}
+
+.step-ball img.emoji-icon,
+.pcard-icon img.emoji-icon,
+.sol-feat-dot img.emoji-icon,
+.dcard-emoji img.emoji-icon,
+.speech-icon img.emoji-icon,
+.tech-icon img.emoji-icon,
+.team-av img.emoji-icon,
+.hero-badge img.emoji-icon,
+.section-chip img.emoji-icon,
+.tag-icon img.emoji-icon,
+.emoji img.emoji-icon {
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  vertical-align: middle;
 }
 
 /* ---- BLUE AURORA HERO GLOW ---- */
@@ -255,7 +283,7 @@ footer {
   gap: 8px;
   background: rgba(41,121,255,0.12);
   border: 2px solid rgba(41,121,255,0.5);
-  color: var(--mint);
+  color: #dfeeff;
   padding: 8px 22px;
   border-radius: 99px;
   font-size: 12px;
@@ -298,7 +326,7 @@ footer {
 }
 
 .hero-title {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(56px, 7vw, 96px);
   line-height: 0.95;
   position: relative; z-index: 2;
@@ -323,7 +351,7 @@ footer {
 .hero-sub {
   font-size: clamp(14px, 2vw, 18px);
   font-weight: 700;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.82);
   margin-bottom: 20px;
   position: relative; z-index: 2;
   animation: pop-up 0.8s 0.2s cubic-bezier(.34,1.56,.64,1) both;
@@ -334,7 +362,7 @@ footer {
 .hero-desc {
   font-size: 17px;
   line-height: 1.8;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.9);
   max-width: 500px;
   margin: 0 0 36px;
   position: relative; z-index: 2;
@@ -352,7 +380,7 @@ footer {
 .btn {
   padding: 16px 36px;
   border-radius: 99px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 16px;
   text-decoration: none;
@@ -373,12 +401,12 @@ footer {
 
 .btn-peach {
   background: transparent;
-  color: rgba(255,255,255,0.85);
-  border-color: rgba(255,255,255,0.25);
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.42);
   box-shadow: inset 0 0 20px rgba(255,255,255,0.03);
   backdrop-filter: blur(10px);
 }
-.btn-peach:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.btn-peach:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.58); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
 
 /* hero stat pills */
 .hero-stats {
@@ -388,17 +416,17 @@ footer {
   animation: pop-up 0.8s 0.5s cubic-bezier(.34,1.56,.64,1) both;
 }
 .stat-pill {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 14px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
   transition: transform 0.2s, background 0.2s;
   backdrop-filter: blur(10px);
 }
-.stat-pill:hover { transform: scale(1.06) translateY(-2px); background: rgba(255,255,255,0.1); }
+.stat-pill:hover { transform: scale(1.06) translateY(-2px); background: rgba(255,255,255,0.16); }
 .stat-pill:nth-child(1) { border-color: rgba(41,121,255,0.3); }
 .stat-pill:nth-child(2) { border-color: rgba(255,179,71,0.3); }
 .stat-pill:nth-child(3) { border-color: rgba(103,212,248,0.3); }
@@ -513,7 +541,7 @@ footer {
 }
 
 .phone-label {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   color: var(--mint);
   font-size: 13px;
   letter-spacing: 0.1em;
@@ -563,14 +591,14 @@ footer {
   90% { width: 89%; }
   100% { width: 20%; }
 }
-.conf-label { font-size: 10px; color: rgba(255,255,255,0.4); font-weight: 700; display: flex; justify-content: space-between; }
+.conf-label { font-size: 10px; color: rgba(255,255,255,0.78); font-weight: 700; display: flex; justify-content: space-between; }
 
 /* floating tags around phone */
 .float-tag {
   position: absolute;
-  background: rgba(15,25,40,0.85);
+  background: rgba(10,19,36,0.94);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 14px;
   padding: 10px 16px;
   display: flex;
@@ -616,8 +644,8 @@ footer {
 
 .tag-icon { font-size: 20px; }
 .tag-text { }
-.tag-title { font-size: 11px; font-weight: 800; color: white; }
-.tag-val { font-size: 13px; font-weight: 900; }
+.tag-title { font-size: 11px; font-weight: 800; color: #ffffff; }
+.tag-val { font-size: 13px; font-weight: 900; text-shadow: 0 1px 0 rgba(0,0,0,0.18); }
 
 /* Tobi mascot on the right side */
 .hero-mascot-right {
@@ -662,51 +690,102 @@ footer {
 .orbit-ring-1 .orbit-dot { background: var(--mint); box-shadow: 0 0 10px var(--mint); }
 .orbit-ring-2 .orbit-dot { background: var(--sky); box-shadow: 0 0 10px var(--sky); }
 .stat-pill .emoji { font-size: 22px; }
-.stat-pill .val { font-family: 'Fredoka One', cursive; font-size: 20px; color: var(--dark); }
+.stat-pill .val { font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: var(--dark); }
 .stat-pill .lbl { font-size: 12px; font-weight: 700; color: var(--muted); }
 
 /* ================ SECTION SHARED ================ */
 section { position: relative; z-index: 1; }
 
 .section-inner {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 90px 40px;
+  padding: 96px 40px;
 }
 
 .section-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--mint);
+  background: rgba(41,121,255,0.12);
   color: white;
-  padding: 6px 18px;
+  padding: 8px 18px;
   border-radius: 99px;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 16px;
+  border: 1px solid rgba(41,121,255,0.16);
+  box-shadow: none;
+}
+
+.hero-badge,
+.dtab,
+.dcard-tag,
+.rl-item,
+.overlay-btn,
+.mock-btn-secondary {
+  color: var(--ink-on-light);
+}
+
+.hero-badge {
+  color: white;
 }
 
 .section-title {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(34px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--dark);
-  line-height: 1.1;
-  margin-bottom: 16px;
+  line-height: 1.08;
+  margin-bottom: 18px;
 }
 
 .section-body {
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.9;
   color: var(--muted);
-  max-width: 580px;
+  max-width: 620px;
 }
 
 /* reveal */
-.reveal { opacity: 0; transform: translateY(40px) scale(0.97); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.22,1,.36,1); }
+.reveal { opacity: 0; transform: translateY(36px) scale(0.98); transition: opacity 0.65s ease, transform 0.65s cubic-bezier(.22,1,.36,1); }
 .reveal.on { opacity: 1; transform: none; }
+
+.pcard,
+.sol-feat,
+.who-card,
+.who-mini,
+.step-item,
+.dcard,
+.speech-bubble,
+.tech-card,
+.team-card,
+.school-strip,
+.conclusion-card,
+.stat-pill {
+  border: 1px solid rgba(41, 121, 255, 0.10);
+  box-shadow: var(--shadow);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.pcard:hover,
+.sol-feat:hover,
+.who-card:hover,
+.who-mini:hover,
+.step-item:hover,
+.dcard:hover,
+.speech-bubble:hover,
+.tech-card:hover,
+.team-card:hover,
+.school-strip:hover,
+.conclusion-card:hover,
+.stat-pill:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-pop);
+  border-color: rgba(41, 121, 255, 0.22);
+}
 
 /* ================ PROBLEM ================ */
 .problem-bg {
@@ -754,6 +833,8 @@ section { position: relative; z-index: 1; }
   border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
   background: #eef2ff;
+  color: var(--ink-on-light);
+  box-shadow: inset 0 0 0 1px rgba(21, 87, 224, 0.08);
 }
 .pcard:nth-child(2) .pcard-icon { background: #eef2ff; }
 .pcard:nth-child(3) .pcard-icon { background: #e4eeff; }
@@ -784,8 +865,9 @@ section { position: relative; z-index: 1; }
 }
 
 .who-num {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 64px;
+  font-weight: 800;
   color: var(--rose-d);
   line-height: 1;
 }
@@ -801,7 +883,7 @@ section { position: relative; z-index: 1; }
   padding: 20px 16px;
   text-align: center;
 }
-.who-mini-num { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--peach-d); }
+.who-mini-num { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700; color: var(--peach-d); }
 .who-mini-lbl { font-size: 12px; font-weight: 700; color: var(--muted); margin-top: 4px; }
 
 /* ================ SOLUTION ================ */
@@ -818,7 +900,7 @@ section { position: relative; z-index: 1; }
 }
 
 .sol-text { }
-.sol-text .section-chip { background: var(--mint-d); }
+.sol-text .section-chip { background: var(--mint-d); color: white; border-color: rgba(255,255,255,0.18); }
 .sol-features { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
 
 .sol-feat {
@@ -837,6 +919,8 @@ section { position: relative; z-index: 1; }
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
   flex-shrink: 0;
+  color: var(--ink-on-light);
+  box-shadow: inset 0 0 0 1px rgba(21, 87, 224, 0.08);
 }
 .sol-feat:nth-child(1) .sol-feat-dot { background: #e4eeff; }
 .sol-feat:nth-child(2) .sol-feat-dot { background: #fff5e0; }
@@ -893,6 +977,8 @@ section { position: relative; z-index: 1; }
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 30px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
   flex-shrink: 0;
   box-shadow: 0 6px 0 rgba(0,0,0,0.12);
   position: relative; z-index: 2;
@@ -927,7 +1013,7 @@ section { position: relative; z-index: 1; }
   background: linear-gradient(160deg, #eef1ff 0%, #e2e8ff 50%, #dde9ff 100%);
   overflow: hidden;
 }
-.detect-bg .section-chip { background: var(--mint); }
+.detect-bg .section-chip { background: var(--mint); color: white; border-color: rgba(255,255,255,0.16); }
 
 .detect-grid {
   display: grid;
@@ -970,7 +1056,7 @@ section { position: relative; z-index: 1; }
 }
 
 .dcard h3 {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -986,6 +1072,7 @@ section { position: relative; z-index: 1; }
   border-radius: 99px;
   font-size: 12px;
   font-weight: 900;
+  border: 1px solid rgba(0,0,0,0.04);
 }
 .dcard.carcinoma .dcard-tag { background: #fde8ee; color: var(--rose-d); }
 .dcard.melanoma .dcard-tag  { background: #f0eaff; color: #8860d0; }
@@ -1004,9 +1091,10 @@ section { position: relative; z-index: 1; }
   border-radius: 99px;
   border: 2.5px solid rgba(0,0,0,0.1);
   background: white;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 14px;
+  color: var(--ink-on-light);
   cursor: pointer;
   transition: all 0.22s cubic-bezier(.34,1.56,.64,1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
@@ -1084,15 +1172,15 @@ section { position: relative; z-index: 1; }
   align-items: center;
 }
 
-.tobi-bg .section-chip { background: var(--mint); }
+.tobi-bg .section-chip { background: var(--mint); color: white; border-color: rgba(255,255,255,0.18); }
 .tobi-bg .section-title { color: white; }
-.tobi-bg .section-body  { color: rgba(255,255,255,0.55); }
+.tobi-bg .section-body  { color: rgba(255,255,255,0.82); }
 
 .tobi-speech-list { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
 
 .speech-bubble {
-  background: rgba(255,255,255,0.07);
-  border: 2px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.2);
   border-radius: 22px;
   padding: 20px 24px;
   display: flex;
@@ -1101,10 +1189,10 @@ section { position: relative; z-index: 1; }
   backdrop-filter: blur(10px);
   transition: transform 0.25s, background 0.25s;
 }
-.speech-bubble:hover { transform: translateX(6px); background: rgba(255,255,255,0.11); }
+.speech-bubble:hover { transform: translateX(6px); background: rgba(255,255,255,0.18); }
 
 .speech-icon { font-size: 28px; flex-shrink: 0; }
-.speech-text { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+.speech-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.6; }
 .speech-text strong { color: white; font-weight: 900; }
 
 /* tobi illustration */
@@ -1112,7 +1200,7 @@ section { position: relative; z-index: 1; }
 
 /* ================ TECH ================ */
 .tech-bg { background: linear-gradient(160deg, #f0f4ff 0%, #e4eeff 100%); }
-.tech-bg .section-chip { background: var(--peach-d); }
+.tech-bg .section-chip { background: var(--peach-d); color: white; border-color: rgba(255,255,255,0.18); }
 
 .tech-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
 
@@ -1131,8 +1219,20 @@ section { position: relative; z-index: 1; }
 
 .tech-card:hover { transform: translateY(-10px) rotate(1deg); box-shadow: var(--shadow-pop); }
 
-.tech-icon { font-size: 56px; margin-bottom: 20px; display: block; }
-.tech-card h3 { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--dark); margin-bottom: 10px; }
+.tech-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  color: var(--ink-on-light);
+  background: linear-gradient(135deg, #edf3ff, #dfeaff);
+  box-shadow: inset 0 0 0 1px rgba(21, 87, 224, 0.08);
+}
+.tech-card h3 { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
 .tech-card p  { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
 /* code snippet fun */
@@ -1154,7 +1254,7 @@ section { position: relative; z-index: 1; }
 .dot.r { background: #ff5f57; }
 .dot.y { background: #febc2e; }
 .dot.g { background: #28c840; }
-.fun-code-title { font-size: 12px; color: rgba(255,255,255,0.35); margin-left: 8px; font-family: monospace; }
+.fun-code-title { font-size: 12px; color: rgba(255,255,255,0.78); margin-left: 8px; font-family: monospace; }
 .fun-code-body { padding: 24px 28px; font-family: monospace; font-size: 13.5px; line-height: 2; }
 .ck { color: #ff7b72; }
 .cs { color: #a5d6ff; }
@@ -1167,7 +1267,7 @@ section { position: relative; z-index: 1; }
 .team-bg {
   background: linear-gradient(160deg, #f0f4ff 0%, #dce8ff 100%);
 }
-.team-bg .section-chip { background: var(--lavender); color: #5a3a9a; }
+.team-bg .section-chip { background: #dbe6ff; color: #3d4f8f; border-color: rgba(61,79,143,0.14); }
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 52px; }
 
@@ -1190,9 +1290,10 @@ section { position: relative; z-index: 1; }
   border-radius: 50%;
   margin: 0 auto 20px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.22);
 }
 .team-card:nth-child(1) .team-av { background: linear-gradient(135deg, #2979ff, #00b0ff); }
 .team-card:nth-child(2) .team-av { background: linear-gradient(135deg, #00b0ff, #7c4dff); }
@@ -1217,7 +1318,7 @@ section { position: relative; z-index: 1; }
   text-align: center;
 }
 .school-strip .flag { font-size: 40px; }
-.school-strip h4 { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--dark); }
+.school-strip h4 { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--dark); }
 .school-strip p { font-size: 14px; color: var(--muted); font-weight: 700; }
 
 /* ================ CONCLUSION ================ */
@@ -1226,7 +1327,7 @@ section { position: relative; z-index: 1; }
   overflow: hidden;
   text-align: center;
 }
-.conclusion-bg .section-chip { background: rgba(255,255,255,0.2); color: white; }
+.conclusion-bg .section-chip { background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.18); }
 .conclusion-bg .section-title { color: white; }
 
 .conclusion-inner { max-width: 700px; margin: 0 auto; padding: 90px 40px; }
@@ -1240,7 +1341,7 @@ section { position: relative; z-index: 1; }
   backdrop-filter: blur(20px);
 }
 .conclusion-quote p {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(20px, 3vw, 28px);
   color: white;
   line-height: 1.5;
@@ -1250,7 +1351,7 @@ section { position: relative; z-index: 1; }
 .conclusion-tagline {
   font-size: 18px;
   font-weight: 800;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.92);
   margin-bottom: 36px;
 }
 
@@ -1260,14 +1361,14 @@ footer {
   padding: 40px;
   text-align: center;
 }
-.footer-brand { font-family: 'Fredoka One', cursive; font-size: 28px; margin-bottom: 8px; }
+.footer-brand { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
 .footer-brand .s { color: var(--mint); }
 .footer-brand .g { color: var(--peach); }
-.footer-sub { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+.footer-sub { font-size: 13px; color: rgba(255,255,255,0.72); margin-bottom: 20px; }
 .footer-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .footer-link {
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
   padding: 8px 20px;
   border-radius: 99px;
   font-size: 13px;
@@ -1302,7 +1403,7 @@ footer {
   padding: 4px 14px;
   font-size: 10px;
   font-weight: 700;
-  color: #8d90b0;
+  color: #556487;
   text-align: center;
   border: 1.5px solid #e8eaf2;
 }
@@ -1356,17 +1457,18 @@ footer {
 .mock-bracket.bl { bottom: 12px; left: 12px; border-width: 0 0 3px 3px; }
 .mock-bracket.br { bottom: 12px; right: 12px; border-width: 0 3px 3px 0; }
 .mock-cam-label {
-  background: rgba(41,121,255,0.12);
+  background: rgba(41,121,255,0.18);
   padding: 8px 14px;
   text-align: center;
   font-size: 11px;
   font-weight: 700;
-  color: #2979ff;
+  color: white;
 }
 .mock-result {
   background: #2b2d42;
   border-radius: 14px;
   padding: 14px 16px;
+  color: white;
 }
 .mock-speech {
   background: white;
@@ -1396,7 +1498,7 @@ footer {
 .mock-btn-secondary {
   flex: 1;
   background: #f0f4fa;
-  color: var(--muted);
+  color: var(--ink-on-light);
   border-radius: 10px;
   padding: 10px;
   font-size: 12px;
@@ -1408,7 +1510,7 @@ footer {
   padding: 10px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--muted);
+  color: #48597e;
   background: #f0f4fa;
   border-top: 1.5px solid #e0e4ef;
 }
@@ -1446,7 +1548,7 @@ footer {
   gap: 10px;
   padding: 10px 18px;
   border-radius: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 700;
   border-left: 4px solid transparent;
@@ -1514,8 +1616,9 @@ footer {
 .project-mockup-wrap:hover .mockup-hover-overlay { opacity: 1; }
 .overlay-label {
   color: white;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  font-weight: 700;
   text-align: center;
   padding: 0 24px;
 }
@@ -1525,7 +1628,7 @@ footer {
   gap: 8px;
   padding: 13px 28px;
   border-radius: 99px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 15px;
   text-decoration: none;
@@ -1565,7 +1668,7 @@ footer {
 
   <!-- LEFT: text content -->
   <div class="hero-left">
-    <div class="hero-badge">🏆 Codeavour 7.0 International</div>
+    <div class="hero-badge" style="color:white;">🏆 Codeavour 7.0 International</div>
 
     <h1 class="hero-title">
       <span class="skin">Skin</span><span class="guard">Guard</span>
@@ -1582,22 +1685,22 @@ footer {
       <div class="stat-pill">
         <span class="emoji">🤖</span>
         <div>
-          <div class="val" style="font-family:'Fredoka One',cursive;font-size:18px;color:var(--mint);">AI</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.45);">Powered</div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--mint);">AI</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Powered</div>
         </div>
       </div>
       <div class="stat-pill">
         <span class="emoji">🔍</span>
         <div>
-          <div class="val" style="font-family:'Fredoka One',cursive;font-size:18px;color:var(--peach);">6</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.45);">Types Detected</div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--peach);">6</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Types Detected</div>
         </div>
       </div>
       <div class="stat-pill">
         <span class="emoji">⚡</span>
         <div>
-          <div class="val" style="font-family:'Fredoka One',cursive;font-size:14px;color:var(--sky);">Real-Time</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.45);">Analysis</div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:14px;color:var(--sky);">Real-Time</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Analysis</div>
         </div>
       </div>
     </div>
@@ -1651,7 +1754,7 @@ footer {
           <!-- app header -->
           <div style="width:100%;display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-top:16px;">
             <div style="width:28px;height:28px;background:var(--mint);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;">🐻</div>
-            <span style="font-family:'Fredoka One',cursive;color:white;font-size:14px;">SkinGuard</span>
+            <span style="font-family:'Poppins',sans-serif;color:white;font-size:14px;">SkinGuard</span>
             <div style="margin-left:auto;width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse-dot 2s infinite;"></div>
           </div>
 
@@ -1730,6 +1833,82 @@ footer {
   </div>
 </header>
 
+<!-- ======== OUR SKIN ======== -->
+<section style="background:linear-gradient(160deg,#f7f9ff 0%,#eef2ff 100%);overflow:hidden;">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <!-- left: skin illustration -->
+      <div class="reveal" style="display:flex;justify-content:center;">
+        <div style="background:white;border-radius:28px;padding:32px;box-shadow:0 12px 40px rgba(41,121,255,0.12);border:3px solid #dde6ff;max-width:340px;width:100%;">
+          <!-- skin cross-section SVG -->
+          <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <!-- background -->
+            <rect width="300" height="220" rx="16" fill="#fff8f0"/>
+            <!-- epidermis layer -->
+            <rect x="0" y="30" width="300" height="42" rx="0" fill="#fde8d0"/>
+            <text x="10" y="56" font-size="10" font-family="Poppins,sans-serif" fill="#c07850" font-weight="800">EPIDERMIS</text>
+            <!-- dermis layer -->
+            <rect x="0" y="72" width="300" height="60" rx="0" fill="#ffd0b0"/>
+            <text x="10" y="102" font-size="10" font-family="Poppins,sans-serif" fill="#a05020" font-weight="800">DERMIS</text>
+            <!-- hair follicles -->
+            <line x1="60" y1="30" x2="60" y2="0" stroke="#8b5020" stroke-width="3" stroke-linecap="round"/>
+            <line x1="120" y1="30" x2="118" y2="0" stroke="#8b5020" stroke-width="3" stroke-linecap="round"/>
+            <line x1="200" y1="30" x2="198" y2="0" stroke="#8b5020" stroke-width="3" stroke-linecap="round"/>
+            <line x1="260" y1="30" x2="258" y2="0" stroke="#8b5020" stroke-width="3" stroke-linecap="round"/>
+            <!-- follicle bulbs -->
+            <ellipse cx="60" cy="100" rx="10" ry="14" fill="#c07050"/>
+            <ellipse cx="200" cy="100" rx="10" ry="14" fill="#c07050"/>
+            <!-- sweat gland -->
+            <path d="M140 72 Q130 100 140 110 Q150 120 145 140" stroke="#a0b8ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="145" cy="142" r="5" fill="#a0b8ff"/>
+            <!-- blood vessels -->
+            <path d="M0 148 Q40 138 80 148 Q120 158 160 148 Q200 138 240 148 Q270 155 300 148" stroke="#ff6b6b" stroke-width="3.5" fill="none"/>
+            <path d="M0 160 Q50 170 100 160 Q150 150 200 160 Q250 170 300 160" stroke="#6baeff" stroke-width="3" fill="none"/>
+            <!-- subcutaneous layer -->
+            <rect x="0" y="132" width="300" height="88" rx="0" fill="#ffe0b0"/>
+            <text x="10" y="178" font-size="10" font-family="Poppins,sans-serif" fill="#805020" font-weight="800">SUBCUTANEOUS</text>
+            <!-- fat cells -->
+            <circle cx="70" cy="185" r="14" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <circle cx="100" cy="195" r="12" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <circle cx="130" cy="182" r="15" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <circle cx="165" cy="195" r="11" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <circle cx="200" cy="183" r="14" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <circle cx="235" cy="194" r="12" fill="#ffd080" opacity="0.7" stroke="#e0a040" stroke-width="1"/>
+            <!-- UV rays hitting surface -->
+            <line x1="240" y1="0" x2="180" y2="30" stroke="#ffcc00" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+            <line x1="265" y1="0" x2="210" y2="30" stroke="#ffcc00" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+            <text x="238" y="14" font-size="9" fill="#e0a000" font-weight="800">UV ☀️</text>
+            <!-- danger cell mutation marker -->
+            <circle cx="170" cy="62" r="9" fill="#ff4d4d" opacity="0.85"/>
+            <text x="170" y="66" text-anchor="middle" font-size="9" fill="white" font-weight="900">!</text>
+          </svg>
+          <p style="text-align:center;font-size:12px;color:#5a6888;margin-top:12px;font-weight:700;">Cross-section of human skin</p>
+        </div>
+      </div>
+
+      <!-- right: content -->
+      <div>
+        <div class="section-chip reveal">🧬 Understanding Our Skin</div>
+        <h2 class="section-title reveal">Our Skin 🫧</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
+          <div class="reveal" style="background:white;border-radius:20px;padding:20px 24px;box-shadow:0 6px 24px rgba(41,121,255,0.08);border-left:4px solid #2979ff;">
+            <p style="font-size:15px;line-height:1.7;color:#3a4870;">Skin is the <strong>largest organ in the human body</strong> and acts as the first line of defense against the environment. It protects us from bacteria, ultraviolet (UV) radiation, and harmful substances.</p>
+          </div>
+          <div class="reveal" style="background:white;border-radius:20px;padding:20px 24px;box-shadow:0 6px 24px rgba(0,176,255,0.08);border-left:4px solid #00b0ff;">
+            <p style="font-size:15px;line-height:1.7;color:#3a4870;">Skin cells <strong>continuously grow, divide, and replace old cells</strong> to maintain healthy skin.</p>
+          </div>
+          <div class="reveal" style="background:linear-gradient(135deg,#fff3e0,#ffe8cc);border-radius:20px;padding:20px 24px;border:2px solid #ffcc80;box-shadow:0 6px 24px rgba(255,150,0,0.1);">
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <span style="font-size:28px;">⚠️</span>
+              <p style="font-size:15px;line-height:1.7;color:#7a4010;"><strong>When skin cells grow uncontrollably</strong> due to genetic mutations or environmental factors, abnormal cell growth can occur — which may lead to <strong style="color:#e05000;">SKIN CANCER</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ======== PROBLEM ======== -->
 <section class="problem-bg">
   <div class="section-inner">
@@ -1788,15 +1967,56 @@ footer {
               <rect x="90" y="10" width="28" height="50" rx="6" fill="#ff8a70"/>
               <rect x="130" y="5" width="28" height="55" rx="6" fill="#ff6f55"/>
               <rect x="170" y="2" width="28" height="58" rx="6" fill="var(--rose-d)"/>
-              <text x="10" y="52" font-size="9" fill="#aaa" font-family="Nunito">2019</text>
-              <text x="50" y="52" font-size="9" fill="#aaa" font-family="Nunito">2020</text>
-              <text x="90" y="52" font-size="9" fill="#aaa" font-family="Nunito">2021</text>
-              <text x="130" y="52" font-size="9" fill="#aaa" font-family="Nunito">2022</text>
-              <text x="170" y="52" font-size="9" fill="#aaa" font-family="Nunito">2023</text>
-              <text x="215" y="30" font-size="11" fill="var(--rose-d)" font-family="Nunito" font-weight="bold">↑ Rising!</text>
+              <text x="10" y="52" font-size="9" fill="#5f6d8d" font-family="Poppins">2019</text>
+              <text x="50" y="52" font-size="9" fill="#5f6d8d" font-family="Poppins">2020</text>
+              <text x="90" y="52" font-size="9" fill="#5f6d8d" font-family="Poppins">2021</text>
+              <text x="130" y="52" font-size="9" fill="#5f6d8d" font-family="Poppins">2022</text>
+              <text x="170" y="52" font-size="9" fill="#5f6d8d" font-family="Poppins">2023</text>
+              <text x="215" y="30" font-size="11" fill="var(--rose-d)" font-family="Poppins" font-weight="bold">↑ Rising!</text>
             </svg>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== WHAT PEOPLE NEED ======== -->
+<section style="background:linear-gradient(135deg,#0d1e50 0%,#0a1840 50%,#071230 100%);overflow:hidden;position:relative;">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;width:500px;height:300px;background:radial-gradient(ellipse,rgba(41,121,255,0.2) 0%,transparent 70%);top:-50px;left:-100px;filter:blur(60px);"></div>
+    <div style="position:absolute;width:400px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,0.15) 0%,transparent 70%);bottom:0;right:-80px;filter:blur(60px);"></div>
+  </div>
+  <div class="section-inner" style="position:relative;z-index:2;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div class="section-chip reveal" style="margin:0 auto 16px;">💡 What People Need</div>
+      <h2 class="section-title reveal" style="color:white;">Easy & Early Identification<br>of Suspicious Skin Conditions 🔍</h2>
+      <p class="section-body reveal" style="color:rgba(255,255,255,0.86);margin:0 auto;">This is where <strong style="color:#8ce8ff;">technology</strong> can play an important role...</p>
+    </div>
+
+    <!-- big theme banner -->
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(41,121,255,0.15),rgba(0,229,255,0.08));border:2px solid rgba(41,121,255,0.3);border-radius:28px;padding:40px;text-align:center;backdrop-filter:blur(10px);margin-bottom:48px;">
+      <div style="font-size:48px;margin-bottom:16px;">🌍🏥⚡</div>
+      <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;color:white;margin-bottom:12px;">Tech for Wellness, Equity for All</h3>
+      <p style="font-size:17px;color:rgba(255,255,255,0.88);line-height:1.8;max-width:680px;margin:0 auto;">This idea aligns with the Codeavour 7.0 theme — where technology is used to <strong style="color:#8ce8ff;">improve health awareness</strong> and provide <strong style="color:#8ce8ff;">equal access</strong> to preventive healthcare solutions for everyone.</p>
+    </div>
+
+    <!-- 3 need cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(41,121,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">👀</div>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Early Detection</h4>
+        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">People need tools to catch suspicious skin conditions as early as possible, before they become life-threatening.</p>
+      </div>
+      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(0,176,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">💰</div>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Affordable Access</h4>
+        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">Not everyone can afford a dermatologist. A free, AI-powered tool removes economic barriers to healthcare screening.</p>
+      </div>
+      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(124,77,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">📱</div>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Simple to Use</h4>
+        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">Technology must be easy enough for anyone — young or old — to use without technical knowledge or special equipment.</p>
       </div>
     </div>
   </div>
@@ -1830,8 +2050,8 @@ footer {
           <div class="mockup-screen">
             <!-- App title bar -->
             <div class="mock-title-bar">
-              <span style="font-family:'Fredoka One',cursive;font-size:17px;color:#2b2d42;">🐻 SkinGuard</span>
-              <span style="font-size:10px;color:#8d90b0;font-weight:700;">v2.0 · AI Powered</span>
+              <span style="font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#2b2d42;">🐻 SkinGuard</span>
+              <span style="font-size:10px;color:#5f7096;font-weight:700;">v2.0 · AI Powered</span>
             </div>
 
             <!-- Camera viewfinder -->
@@ -1854,9 +2074,9 @@ footer {
 
             <!-- Result card -->
             <div class="mock-result">
-              <div style="font-size:10px;color:#8d90b0;font-weight:700;margin-bottom:4px;">✨ AI Result</div>
-              <div style="font-family:'Fredoka One',cursive;font-size:16px;color:#2979ff;">✅ Normal Mole</div>
-              <div style="font-size:10px;color:#8d90b0;margin-top:2px;">No suspicious signs detected</div>
+              <div style="font-size:10px;color:#cbd6ff;font-weight:700;margin-bottom:4px;">✨ AI Result</div>
+              <div style="font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#2979ff;">✅ Normal Mole</div>
+              <div style="font-size:10px;color:#eef3ff;margin-top:2px;">No suspicious signs detected</div>
             </div>
 
             <!-- Tobi speech bubble -->
@@ -1876,7 +2096,7 @@ footer {
               </div>
               <div class="mock-bubble">
                 <div style="font-size:11px;font-weight:900;color:#2b2d42;">Looks healthy! 🎉</div>
-                <div style="font-size:10px;color:#8d90b0;margin-top:2px;">Keep checking regularly!</div>
+                <div style="font-size:10px;color:#66789d;margin-top:2px;">Keep checking regularly!</div>
               </div>
             </div>
 
@@ -1935,7 +2155,7 @@ footer {
 <section class="how-bg">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:0;">
-      <div class="section-chip reveal" style="margin:0 auto 16px;">🗺️ How It Works</div>
+      <div class="section-chip reveal" style="margin:0 auto 16px;color:white;">🗺️ How It Works</div>
       <h2 class="section-title reveal">Super Easy! Just 5 Steps 🙌</h2>
       <p class="section-body reveal" style="margin:0 auto;">Even kids can use it — that's kind of the whole point! Here's what happens when you open SkinGuard:</p>
     </div>
@@ -1979,7 +2199,6 @@ footer {
     </div>
   </div>
 </section>
-
 <!-- ======== DETECTION TYPES ======== -->
 <section class="detect-bg">
   <div class="section-inner">
@@ -2019,7 +2238,7 @@ footer {
             <path d="M33 27 Q36 24 39 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
             <path d="M41 27 Q44 24 47 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
             <path d="M34 40 Q40 36 46 40" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="var(--rose-d)" font-weight="800">See a doctor!</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--rose-d)" font-weight="800">See a doctor!</text>
           </svg>
         </div>
       </div>
@@ -2045,7 +2264,7 @@ footer {
             <ellipse cx="36" cy="30" rx="4" ry="3" fill="white" opacity="0.6"/>
             <path d="M34 41 Q40 38 46 41" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
             <ellipse cx="54" cy="26" rx="3" ry="4" fill="#7bc0ff" opacity="0.8"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="#8860d0" font-weight="800">High Risk! 🚨</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="#8860d0" font-weight="800">High Risk! 🚨</text>
           </svg>
         </div>
       </div>
@@ -2069,7 +2288,7 @@ footer {
             <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
             <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
             <path d="M35 40 Q40 38 45 40" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="var(--peach-d)" font-weight="800">Check soon!</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--peach-d)" font-weight="800">Check soon!</text>
           </svg>
         </div>
       </div>
@@ -2094,7 +2313,7 @@ footer {
             <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
             <circle cx="37" cy="29.5" r="1.5" fill="white"/>
             <path d="M35 39 Q40 43 45 39" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="var(--sky-d)" font-weight="800">Keep watching!</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--sky-d)" font-weight="800">Keep watching!</text>
           </svg>
         </div>
       </div>
@@ -2121,7 +2340,7 @@ footer {
             <path d="M33 39 Q40 46 47 39" stroke="#c06820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
             <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
             <ellipse cx="50" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="#1557e0" font-weight="800">Benign! ✅</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="#1557e0" font-weight="800">Benign! ✅</text>
           </svg>
         </div>
       </div>
@@ -2148,7 +2367,7 @@ footer {
             <path d="M33 39 Q40 46 47 39" stroke="#c06820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
             <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
             <ellipse cx="50" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Nunito,sans-serif" fill="var(--mint-d)" font-weight="800">You're safe! 🎉</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--mint-d)" font-weight="800">You're safe! 🎉</text>
           </svg>
         </div>
       </div>
@@ -2179,8 +2398,8 @@ footer {
           <line x1="170" y1="230" x2="170" y2="360" stroke="#c0c8f0" stroke-width="3"/>
           <!-- chest badge -->
           <rect x="178" y="245" width="50" height="28" rx="8" fill="#2979ff" opacity="0.8"/>
-          <text x="203" y="258" text-anchor="middle" font-size="8" font-family="Nunito,sans-serif" fill="white" font-weight="800">DOCTOR</text>
-          <text x="203" y="268" text-anchor="middle" font-size="7" font-family="Nunito,sans-serif" fill="white">TOBI 🐻</text>
+          <text x="203" y="258" text-anchor="middle" font-size="8" font-family="Poppins,sans-serif" fill="white" font-weight="800">DOCTOR</text>
+          <text x="203" y="268" text-anchor="middle" font-size="7" font-family="Poppins,sans-serif" fill="white">TOBI 🐻</text>
           <!-- stethoscope -->
           <path d="M130 250 Q120 270 130 285 Q150 300 170 290 Q195 280 188 265 Q184 255 175 255" stroke="#2979ff" stroke-width="4" fill="none" stroke-linecap="round"/>
           <circle cx="170" cy="296" r="10" fill="#2979ff"/>
@@ -2191,8 +2410,8 @@ footer {
           <!-- left hand holding tablet -->
           <rect x="28" y="290" width="60" height="44" rx="10" fill="#2b2d42"/>
           <rect x="32" y="294" width="52" height="36" rx="8" fill="#2979ff" opacity="0.3"/>
-          <text x="58" y="308" text-anchor="middle" font-size="7" font-family="Nunito,sans-serif" fill="#2979ff" font-weight="bold">SKIN</text>
-          <text x="58" y="318" text-anchor="middle" font-size="7" font-family="Nunito,sans-serif" fill="#2979ff" font-weight="bold">SCAN</text>
+          <text x="58" y="308" text-anchor="middle" font-size="7" font-family="Poppins,sans-serif" fill="#2979ff" font-weight="bold">SKIN</text>
+          <text x="58" y="318" text-anchor="middle" font-size="7" font-family="Poppins,sans-serif" fill="#2979ff" font-weight="bold">SCAN</text>
           <text x="58" y="328" text-anchor="middle" font-size="11">✅</text>
           <!-- right hand thumbs up -->
           <ellipse cx="268" cy="310" rx="16" ry="12" fill="#f4a460"/>
@@ -2319,7 +2538,7 @@ footer {
           <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
         </div>
         <span class="fun-code-title">🧩 SkinGuard Blocks — PictoBlox Editor</span>
-        <div style="margin-left:auto;background:rgba(41,121,255,0.2);color:#2979ff;padding:4px 14px;border-radius:99px;font-size:11px;font-weight:800;">▶ Running</div>
+        <div style="margin-left:auto;background:rgba(41,121,255,0.22);color:#9fd9ff;padding:4px 14px;border-radius:99px;font-size:11px;font-weight:800;border:1px solid rgba(159,217,255,0.22);">▶ Running</div>
       </div>
       <div class="block-canvas">
         <!-- Event block -->
@@ -2343,7 +2562,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#7c4dff;">
             <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Carcinoma detected!"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#fde8ee;">
+          <div class="block b-action" style="margin-left:24px;background:#fde8ee;color:#8f2340;border-left-color:#c43d63;">
             <span class="b-icon">🏥</span> show <strong>Seek Doctor</strong> button
           </div>
         </div>
@@ -2356,7 +2575,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#c3adf5;">
             <span class="b-icon">🚨</span> Tobi alerts <span class="b-str">"HIGH RISK!"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#f0e8ff;">
+          <div class="block b-action" style="margin-left:24px;background:#f0e8ff;color:#5d3295;border-left-color:#8d61cf;">
             <span class="b-icon">🔔</span> play <strong>alarm sound</strong>
           </div>
         </div>
@@ -2369,7 +2588,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#2979ff;">
             <span class="b-icon">✅</span> Tobi cheers <span class="b-str">"You're safe! 🎉"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#e4eeff;">
+          <div class="block b-action" style="margin-left:24px;background:#e4eeff;color:#1e5ccf;border-left-color:#4b84ea;">
             <span class="b-icon">🎊</span> play <strong>confetti animation</strong>
           </div>
         </div>
@@ -2382,7 +2601,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#00b0ff;">
             <span class="b-icon">☀️</span> Tobi warns <span class="b-str">"Pre-cancerous sign! Schedule a check-up!"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#fff8e0;">
+          <div class="block b-action" style="margin-left:24px;background:#fff8e0;color:#8a6200;border-left-color:#d8a625;">
             <span class="b-icon">📋</span> show <strong>Book Appointment</strong> button
           </div>
         </div>
@@ -2395,7 +2614,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#67d4f8;">
             <span class="b-icon">🩸</span> Tobi says <span class="b-str">"Blood vessel mark — monitor regularly!"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#dff0ff;">
+          <div class="block b-action" style="margin-left:24px;background:#dff0ff;color:#17648a;border-left-color:#3f9dcb;">
             <span class="b-icon">📅</span> show <strong>Reminder</strong> calendar
           </div>
         </div>
@@ -2408,7 +2627,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#20c97a;">
             <span class="b-icon">🌿</span> Tobi cheers <span class="b-str">"Benign growth — yearly check is enough! ✅"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#e0fff0;">
+          <div class="block b-action" style="margin-left:24px;background:#e0fff0;color:#16724c;border-left-color:#33af7b;">
             <span class="b-icon">👍</span> play <strong>thumbs up animation</strong>
           </div>
         </div>
@@ -2428,7 +2647,7 @@ footer {
 <section class="team-bg">
   <div class="section-inner">
     <div style="text-align:center;">
-      <div class="section-chip reveal" style="margin:0 auto 16px;">👫 Our Team</div>
+      <div class="section-chip reveal" style="margin:0 auto 16px;color:white;">👫 Our Team</div>
       <h2 class="section-title reveal">Meet the Young Innovators! 🌟</h2>
       <p class="section-body reveal" style="margin:0 auto;">Three elementary school kids from Indonesia who dared to build an AI-powered health tool. That's pretty awesome! 💪</p>
     </div>
@@ -2558,7 +2777,7 @@ footer {
         <!-- hat -->
         <ellipse cx="80" cy="60" rx="28" ry="8" fill="#2979ff"/>
         <rect x="64" y="34" width="32" height="28" rx="6" fill="#2979ff"/>
-        <text x="80" y="52" text-anchor="middle" font-size="10" font-family="Fredoka One,cursive" fill="white">MD</text>
+        <text x="80" y="52" text-anchor="middle" font-size="10" font-family="Poppins,sans-serif" fill="white">MD</text>
       </svg>
     </div>
 
@@ -2584,10 +2803,21 @@ footer {
     <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" class="footer-link" target="_blank">🔗 Live Project</a>
     <a href="https://www.codeavour.org" class="footer-link" target="_blank">🌍 Codeavour.org</a>
   </div>
-  <p style="margin-top:20px;font-size:12px;color:rgba(255,255,255,0.2);">Made with ❤️ by young innovators · "I Am A Young Innovator"</p>
+  <p style="margin-top:20px;font-size:12px;color:rgba(255,255,255,0.68);">Made with ❤️ by young innovators · "I Am A Young Innovator"</p>
 </footer>
 
 <script>
+function renderEmojiImages(target = document.body) {
+  if (!window.twemoji) return;
+  twemoji.parse(target, {
+    folder: 'svg',
+    ext: '.svg',
+    className: 'emoji-icon'
+  });
+}
+
+renderEmojiImages();
+
 // ---- floating bubbles ----
 const bb = document.getElementById('bb');
 const cols = ['#2979ff','#00b0ff','#00e5ff','#7c4dff','#82b1ff','#40c4ff'];
@@ -2632,6 +2862,7 @@ document.addEventListener('mousemove', e => {
       opacity:1;
     `;
     document.body.appendChild(sp);
+    renderEmojiImages(sp);
     requestAnimationFrame(()=>{
       sp.style.transform = `translate(${(Math.random()-0.5)*40}px, -40px)`;
       sp.style.opacity = '0';
@@ -2660,6 +2891,7 @@ if (scanEl) {
       scanEl.textContent = r.label;
       scanEl.style.color = r.color;
       scanEl.style.borderColor = r.color.replace('var(--mint)', 'rgba(41,121,255,0.4)');
+      renderEmojiImages(scanEl);
       if (confEl) confEl.textContent = r.conf;
       scanEl.style.opacity = '1';
       scanEl.style.transform = 'translateY(0)';
