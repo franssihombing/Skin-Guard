@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SkinGuard 🐻 – Your Skin's Best Friend!</title>
+<title>SkinGuard - Skin Cancer Classification System</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <style>
@@ -1645,6 +1645,383 @@ footer {
   color: white;
   border: 2px solid rgba(255,255,255,0.35);
 }
+
+/* ================ 2026 REFRESH OVERRIDES ================ */
+:root {
+  --mint: #d6e5bd;
+  --mint-d: #97b16f;
+  --sky: #bcd8ec;
+  --sky-d: #7ea8c7;
+  --peach: #f9e1a8;
+  --peach-d: #d7b66c;
+  --rose: #f2d8a2;
+  --rose-d: #b5862c;
+  --lemon: #fdf2d4;
+  --lavender: #d9e9f4;
+  --cream: #fbf8ef;
+  --white: #ffffff;
+  --dark: #314658;
+  --text: #425768;
+  --muted: #667785;
+  --ink-on-light: #314658;
+  --ink-on-dark: #ffffff;
+  --shadow: 0 20px 45px rgba(90, 114, 130, 0.12);
+  --shadow-pop: 0 26px 62px rgba(90, 114, 130, 0.18);
+}
+
+body {
+  background: linear-gradient(180deg, #fbf8ef 0%, #f6fbf0 45%, #eef5fa 100%);
+}
+
+.hero {
+  background: linear-gradient(145deg, #fbf0d2 0%, #eef7e0 45%, #dcecf7 100%);
+}
+
+.hero::before {
+  background-image:
+    linear-gradient(rgba(126, 168, 199, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 168, 199, 0.14) 1px, transparent 1px);
+}
+
+.hero-badge {
+  background: rgba(255,255,255,0.74);
+  border-color: rgba(126, 168, 199, 0.28);
+  color: var(--dark);
+  box-shadow: 0 16px 32px rgba(126, 168, 199, 0.16);
+}
+
+.hero-badge::before {
+  background: var(--sky-d);
+}
+
+.hero-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-team-name,
+.hero-school-name {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.68);
+  border: 1px solid rgba(126, 168, 199, 0.24);
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-brand {
+  margin-bottom: 20px;
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 560px);
+  background: rgba(255,255,255,0.92);
+  border-radius: 28px;
+  padding: 12px 18px;
+  box-shadow: var(--shadow-pop);
+}
+
+.hero-title .skin,
+.hero-title .guard {
+  text-shadow: none;
+}
+
+.hero-sub {
+  color: var(--dark);
+}
+
+.hero-desc {
+  max-width: 620px;
+  color: var(--muted);
+}
+
+.btn {
+  box-shadow: none;
+}
+
+.btn-mint {
+  background: linear-gradient(135deg, var(--peach), #f4d38a) !important;
+  color: var(--dark) !important;
+  box-shadow: 0 6px 0 var(--peach-d), 0 14px 30px rgba(215, 182, 108, 0.28) !important;
+}
+
+.btn-mint:hover {
+  box-shadow: 0 10px 0 var(--peach-d), 0 20px 40px rgba(215, 182, 108, 0.34) !important;
+}
+
+.btn-peach {
+  background: rgba(255,255,255,0.78);
+  color: var(--dark);
+  border-color: rgba(126, 168, 199, 0.3);
+  box-shadow: 0 10px 24px rgba(126, 168, 199, 0.14);
+}
+
+.btn-peach:hover {
+  background: #ffffff;
+  color: var(--dark);
+}
+
+.btn-sky {
+  background: linear-gradient(135deg, var(--sky), #d7e8f5);
+  color: var(--dark);
+  box-shadow: 0 6px 0 var(--sky-d), 0 14px 30px rgba(126, 168, 199, 0.24);
+}
+
+.btn-sky:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 0 var(--sky-d), 0 20px 40px rgba(126, 168, 199, 0.32);
+}
+
+.stat-pill {
+  background: rgba(255,255,255,0.72);
+  border-color: rgba(126, 168, 199, 0.22);
+}
+
+.section-chip {
+  background: linear-gradient(135deg, var(--sky), var(--mint)) !important;
+  color: var(--dark) !important;
+  box-shadow: 0 10px 24px rgba(126, 168, 199, 0.18);
+}
+
+.problem-bg,
+.tech-bg,
+.detect-bg {
+  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(246,251,240,0.72) 100%);
+}
+
+.solution-bg,
+.team-bg {
+  background: linear-gradient(180deg, #f8fcf2 0%, #eef5fa 100%);
+}
+
+.how-bg {
+  background: linear-gradient(135deg, #bcd8ec 0%, #d6e5bd 100%);
+}
+
+.tobi-bg {
+  background: linear-gradient(135deg, #87b1cf 0%, #9db97a 100%);
+}
+
+.conclusion-bg {
+  background: linear-gradient(180deg, #fbf4df 0%, #eef5fa 100%);
+}
+
+.dtab.active {
+  background: linear-gradient(135deg, var(--sky), var(--mint)) !important;
+  border-color: var(--sky-d) !important;
+  box-shadow: 0 6px 18px rgba(126, 168, 199, 0.32) !important;
+}
+
+.rl-item.safe {
+  background: #edf6df !important;
+}
+
+.dcard,
+.team-card,
+.speech-bubble,
+.tech-card,
+.school-strip,
+.conclusion-card,
+.stat-pill {
+  border-color: rgba(126, 168, 199, 0.16);
+}
+
+.dcard.melanoma {
+  border-color: rgba(215, 182, 108, 0.5);
+}
+
+.dcard.melanoma::before,
+.dcard.melanoma .dcard-risk-bar {
+  background: var(--peach);
+}
+
+.dcard.melanoma h3 {
+  color: var(--rose-d);
+}
+
+.dcard.melanoma .dcard-tag {
+  background: #fff2cf;
+  color: var(--rose-d);
+}
+
+.dcard.carcinoma {
+  border-color: rgba(126, 168, 199, 0.46);
+}
+
+.dcard.carcinoma::before,
+.dcard.carcinoma .dcard-risk-bar {
+  background: var(--sky);
+}
+
+.dcard.carcinoma h3 {
+  color: var(--sky-d);
+}
+
+.dcard.carcinoma .dcard-tag {
+  background: #e8f2fa;
+  color: var(--sky-d);
+}
+
+.dcard.actinic {
+  border-color: rgba(151, 177, 111, 0.42);
+}
+
+.dcard.actinic .dcard-risk-bar {
+  background: var(--mint);
+}
+
+.dcard.actinic .dcard-tag {
+  background: #edf6df;
+  color: #6f8f42;
+}
+
+.dcard.normal {
+  border-color: rgba(126, 168, 199, 0.25);
+}
+
+.dcard.normal .dcard-tag {
+  background: #eef5fa;
+  color: var(--dark);
+}
+
+.team-grid {
+  gap: 32px;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.86);
+  padding: 32px 24px;
+}
+
+.team-photo {
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 18px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.team-photo::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.55);
+}
+
+.team-photo span {
+  position: relative;
+  z-index: 1;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: rgba(49, 70, 88, 0.86);
+}
+
+.team-photo-1 {
+  background: linear-gradient(135deg, #dcebf7 0%, #f9f1d7 100%);
+}
+
+.team-photo-2 {
+  background: linear-gradient(135deg, #f6e8bc 0%, #d9e8c3 100%);
+}
+
+.team-photo-3 {
+  background: linear-gradient(135deg, #d8e8c0 0%, #dbeaf5 100%);
+}
+
+.team-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f0f6fb;
+  color: var(--sky-d);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-mockup,
+.block-coding-ui {
+  box-shadow: var(--shadow-pop);
+}
+
+.mockup-hover-overlay {
+  background: linear-gradient(180deg, rgba(49, 70, 88, 0.2) 0%, rgba(49, 70, 88, 0.88) 100%);
+}
+
+.overlay-btn-primary {
+  background: linear-gradient(135deg, var(--peach), #f4d38a);
+  color: var(--dark);
+  box-shadow: 0 6px 0 var(--peach-d), 0 10px 24px rgba(215, 182, 108, 0.26);
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  width: min(240px, 100%);
+  background: rgba(255,255,255,0.92);
+  padding: 8px 14px;
+  border-radius: 22px;
+  box-shadow: 0 16px 28px rgba(49, 70, 88, 0.18);
+}
+
+footer {
+  background: linear-gradient(145deg, #7ea8c7 0%, #9fc2d9 42%, #9ab579 100%) !important;
+}
+
+.footer-link {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-link:hover {
+  background: rgba(255,255,255,0.95);
+  color: var(--dark);
+}
+
+@media (max-width: 900px) {
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-kicker,
+  .hero-btns,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 </style>
 </head>
 <body>
@@ -1662,45 +2039,50 @@ footer {
   </div>
 
   <!-- ambient blobs -->
-  <div class="blob" style="width:600px;height:600px;background:rgba(41,121,255,0.12);top:-200px;left:-200px;animation-delay:0s;"></div>
-  <div class="blob" style="width:400px;height:400px;background:rgba(103,212,248,0.1);top:50px;right:-100px;animation-delay:2s;"></div>
-  <div class="blob" style="width:350px;height:350px;background:rgba(255,179,71,0.08);bottom:-100px;left:30%;animation-delay:4s;"></div>
+  <div class="blob" style="width:600px;height:600px;background:rgba(188,216,236,0.28);top:-200px;left:-200px;animation-delay:0s;"></div>
+  <div class="blob" style="width:400px;height:400px;background:rgba(214,229,189,0.22);top:50px;right:-100px;animation-delay:2s;"></div>
+  <div class="blob" style="width:350px;height:350px;background:rgba(249,225,168,0.24);bottom:-100px;left:30%;animation-delay:4s;"></div>
 
   <!-- LEFT: text content -->
   <div class="hero-left">
-    <div class="hero-badge" style="color:white;">🏆 Codeavour 7.0 International</div>
+    <div class="hero-kicker">
+      <span class="hero-team-name">EPIS Overclock Team</span>
+      <span class="hero-school-name">Embun Pagi Islamic School</span>
+    </div>
+    <div class="hero-badge">🏆 Codeavour 7.0 International</div>
 
-    <h1 class="hero-title">
-      <span class="skin">Skin</span><span class="guard">Guard</span>
+    <h1 class="hero-brand">
+      <img src="assets/skinguard-logo.jpeg" alt="SkinGuard logo" class="hero-logo">
     </h1>
-    <p class="hero-sub">🩺 AI Skin Cancer Classification</p>
-    <p class="hero-desc">Meet your skin's new best friend! SkinGuard uses AI magic to help you spot potential skin issues — fast, easy, and totally free!</p>
+    <p class="hero-sub">🩺 Skin Cancer Classification System</p>
+    <p class="hero-desc">SkinGuard is an AI-assisted screening website that classifies four skin condition categories and gives simple follow-up recommendations in language that is easy to understand.</p>
 
     <div class="hero-btns">
-      <a href="https://youtu.be/1dSFtQ6jrT8" target="_blank" class="btn btn-mint">▶ Watch Demo</a>
-      <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" target="_blank" class="btn btn-peach">🔗 Try it Now!</a>
+      <a href="https://www.codeavour.org" target="_blank" class="btn btn-peach">🌍 Project Link</a>
+      <a href="https://youtu.be/1dSFtQ6jrT8" target="_blank" class="btn btn-mint">▶ Presentation Video</a>
+      <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" target="_blank" class="btn btn-sky">🔗 Demo Project</a>
     </div>
 
     <div class="hero-stats">
       <div class="stat-pill">
+        <span class="emoji">🧬</span>
+        <div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--sky-d);">4</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:var(--muted);">Skin Classes</div>
+        </div>
+      </div>
+      <div class="stat-pill">
         <span class="emoji">🤖</span>
         <div>
-          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--mint);">AI</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Powered</div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--mint-d);">AI</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:var(--muted);">Powered</div>
         </div>
       </div>
       <div class="stat-pill">
-        <span class="emoji">🔍</span>
+        <span class="emoji">💡</span>
         <div>
-          <div class="val" style="font-family:'Poppins',sans-serif;font-size:18px;color:var(--peach);">6</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Types Detected</div>
-        </div>
-      </div>
-      <div class="stat-pill">
-        <span class="emoji">⚡</span>
-        <div>
-          <div class="val" style="font-family:'Poppins',sans-serif;font-size:14px;color:var(--sky);">Real-Time</div>
-          <div class="lbl" style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);">Analysis</div>
+          <div class="val" style="font-family:'Poppins',sans-serif;font-size:14px;color:var(--peach-d);">Simple</div>
+          <div class="lbl" style="font-size:11px;font-weight:700;color:var(--muted);">Recommendations</div>
         </div>
       </div>
     </div>
@@ -1772,13 +2154,13 @@ footer {
           <div class="phone-label">Analyzing...</div>
 
           <!-- result -->
-          <div class="phone-result" id="scanResult">🔍 Benign Keratosis — Low Risk</div>
+          <div class="phone-result" id="scanResult">🚨 Melanoma — High Priority</div>
 
           <!-- confidence bar -->
           <div class="phone-confidence">
             <div class="conf-label">
               <span>Confidence</span>
-              <span id="confPct">89%</span>
+              <span id="confPct">92%</span>
             </div>
             <div class="conf-bar-bg">
               <div class="conf-bar-fill"></div>
@@ -2033,11 +2415,14 @@ footer {
           <!-- hover overlay -->
           <div class="mockup-hover-overlay">
             <div class="overlay-label">🐻 Coba SkinGuard Sekarang!</div>
+            <a href="https://www.codeavour.org" target="_blank" class="overlay-btn overlay-btn-secondary">
+              🌍 Project Link
+            </a>
             <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" target="_blank" class="overlay-btn overlay-btn-primary">
-              🔗 Buka di PictoBlox
+              🔗 Open Demo Project
             </a>
             <a href="https://youtu.be/1dSFtQ6jrT8" target="_blank" class="overlay-btn overlay-btn-secondary">
-              ▶ Tonton Demo
+              ▶ Presentation Video
             </a>
           </div>
           <div class="project-mockup">
@@ -2045,13 +2430,13 @@ footer {
             <div class="mockup-dots">
               <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
             </div>
-            <div class="mockup-url">🔗 pictoblox.page.link/skinguard</div>
+            <div class="mockup-url">🔗 pictoblox.page.link/h5c3wf4qdJ2dF9BH6</div>
           </div>
           <div class="mockup-screen">
             <!-- App title bar -->
             <div class="mock-title-bar">
-              <span style="font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#2b2d42;">🐻 SkinGuard</span>
-              <span style="font-size:10px;color:#5f7096;font-weight:700;">v2.0 · AI Powered</span>
+              <span style="font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#2b2d42;">SkinGuard</span>
+              <span style="font-size:10px;color:#5f7096;font-weight:700;">Skin Classification System</span>
             </div>
 
             <!-- Camera viewfinder -->
@@ -2075,8 +2460,8 @@ footer {
             <!-- Result card -->
             <div class="mock-result">
               <div style="font-size:10px;color:#cbd6ff;font-weight:700;margin-bottom:4px;">✨ AI Result</div>
-              <div style="font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#2979ff;">✅ Normal Mole</div>
-              <div style="font-size:10px;color:#eef3ff;margin-top:2px;">No suspicious signs detected</div>
+              <div style="font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--sky-d);">✅ Normal Mole</div>
+              <div style="font-size:10px;color:#eef3ff;margin-top:2px;">Low concern, keep monitoring changes</div>
             </div>
 
             <!-- Tobi speech bubble -->
@@ -2095,8 +2480,8 @@ footer {
                 </svg>
               </div>
               <div class="mock-bubble">
-                <div style="font-size:11px;font-weight:900;color:#2b2d42;">Looks healthy! 🎉</div>
-                <div style="font-size:10px;color:#66789d;margin-top:2px;">Keep checking regularly!</div>
+                <div style="font-size:11px;font-weight:900;color:#2b2d42;">Recommendation ready</div>
+                <div style="font-size:10px;color:#66789d;margin-top:2px;">Keep checking regularly.</div>
               </div>
             </div>
 
@@ -2106,7 +2491,7 @@ footer {
               <div class="mock-btn-secondary">ℹ️ Learn More</div>
             </div>
           </div>
-          <div class="mockup-label">🎮 Actual SkinGuard App on PictoBlox</div>
+          <div class="mockup-label">🎮 SkinGuard Demo Project on PictoBlox</div>
         </div>
         </div><!-- end project-mockup-wrap -->
       </div>
@@ -2114,7 +2499,7 @@ footer {
       <div class="sol-text">
         <div class="section-chip reveal">💡 The Solution</div>
         <h2 class="section-title reveal">Say Hello to<br>SkinGuard! 🐻✨</h2>
-        <p class="section-body reveal">We built an AI-powered app using PictoBlox that anyone can use to check their skin — right from their device! No doctors, no money, no problem!</p>
+        <p class="section-body reveal">We built an AI-powered tool in PictoBlox to support early skin screening from a device camera and provide easy-to-read next-step recommendations.</p>
 
         <div class="sol-features">
           <div class="sol-feat reveal">
@@ -2155,7 +2540,7 @@ footer {
 <section class="how-bg">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:0;">
-      <div class="section-chip reveal" style="margin:0 auto 16px;color:white;">🗺️ How It Works</div>
+      <div class="section-chip reveal" style="margin:0 auto 16px;">🗺️ How It Works</div>
       <h2 class="section-title reveal">Super Easy! Just 5 Steps 🙌</h2>
       <p class="section-body reveal" style="margin:0 auto;">Even kids can use it — that's kind of the whole point! Here's what happens when you open SkinGuard:</p>
     </div>
@@ -2186,14 +2571,14 @@ footer {
         <div class="step-ball">🏷️</div>
         <div class="step-content">
           <h3>Get Your Result</h3>
-          <p>SkinGuard classifies the image as <strong>Carcinoma</strong>, <strong>Melanoma</strong>, or <strong>Normal Mole</strong> — instantly!</p>
+          <p>SkinGuard classifies the image as <strong>Melanoma</strong>, <strong>Carcinoma</strong>, <strong>Actinic Keratosis</strong>, or <strong>Normal Mole</strong> — instantly!</p>
         </div>
       </div>
       <div class="step-item reveal">
         <div class="step-ball">🐻</div>
         <div class="step-content">
           <h3>Tobi Tells You What to Do</h3>
-          <p>Our friendly bear guide explains the result in plain language and tells you if you should see a doctor!</p>
+          <p>Our friendly bear guide explains the result in plain language and gives you some recommendations for what to do next.</p>
         </div>
       </div>
     </div>
@@ -2205,7 +2590,7 @@ footer {
     <div style="text-align:center;">
       <div class="section-chip reveal" style="margin:0 auto 16px;">🔍 Detection Types</div>
       <h2 class="section-title reveal">What Can SkinGuard Find? 🧬</h2>
-      <p class="section-body reveal" style="margin:0 auto;">SkinGuard is trained to recognize <strong>6 categories</strong> of skin conditions — and Tobi knows exactly what to say for each one!</p>
+      <p class="section-body reveal" style="margin:0 auto;">SkinGuard is focused on <strong>4 priority categories</strong> of skin findings, each paired with a clear recommendation from Tobi.</p>
     </div>
 
     <!-- Risk filter tabs -->
@@ -2218,41 +2603,15 @@ footer {
 
     <div class="detect-grid">
       <!-- 1 -->
-      <div class="dcard carcinoma reveal" data-risk="danger">
-        <div class="dcard-risk-bar"></div>
-        <span class="dcard-emoji">⚠️</span>
-        <h3>Carcinoma</h3>
-        <p>Basal or squamous cell carcinoma — appears as a bumpy, scaly, or ulcerated patch. One of the most common skin cancers. Tobi will tell you to see a doctor right away!</p>
-        <div class="dcard-tag">⚕️ Seek Medical Help</div>
-        <div class="dcard-facts">
-          <span>📌 Common in fair skin</span>
-          <span>☀️ Sun exposure risk</span>
-        </div>
-        <div style="margin-top:16px;text-align:center;">
-          <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="30" r="22" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="7" fill="#f4a460"/><circle cx="50" cy="22" r="7" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="4" fill="#e08030"/><circle cx="50" cy="22" r="4" fill="#e08030"/>
-            <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
-            <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
-            <path d="M33 27 Q36 24 39 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
-            <path d="M41 27 Q44 24 47 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
-            <path d="M34 40 Q40 36 46 40" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--rose-d)" font-weight="800">See a doctor!</text>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 2 -->
       <div class="dcard melanoma reveal" data-risk="danger">
-        <div class="dcard-risk-bar" style="background:var(--lavender);"></div>
+        <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji">🚨</span>
         <h3>Melanoma</h3>
-        <p>The most serious skin cancer — often dark, irregular, and fast-growing. Tobi sends a HIGH RISK alert and urges you to get help immediately!</p>
-        <div class="dcard-tag">🔴 High Risk!</div>
+        <p>A dangerous skin cancer that can appear dark, uneven, and quickly changing. SkinGuard marks this as high priority and recommends prompt medical follow-up.</p>
+        <div class="dcard-tag">🔴 High Priority</div>
         <div class="dcard-facts">
-          <span>🧬 Can spread fast</span>
-          <span>🔬 ABCDE check</span>
+          <span>🧬 Irregular borders</span>
+          <span>⏱ Needs prompt follow-up</span>
         </div>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
@@ -2264,21 +2623,47 @@ footer {
             <ellipse cx="36" cy="30" rx="4" ry="3" fill="white" opacity="0.6"/>
             <path d="M34 41 Q40 38 46 41" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
             <ellipse cx="54" cy="26" rx="3" ry="4" fill="#7bc0ff" opacity="0.8"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="#8860d0" font-weight="800">High Risk! 🚨</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--rose-d)" font-weight="800">High priority</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="dcard carcinoma reveal" data-risk="danger">
+        <div class="dcard-risk-bar"></div>
+        <span class="dcard-emoji">⚠️</span>
+        <h3>Carcinoma</h3>
+        <p>Basal or squamous cell carcinoma may appear as a rough, scaly, or ulcerated patch. SkinGuard recommends prompt medical consultation for further evaluation.</p>
+        <div class="dcard-tag">⚕️ Prompt Check Recommended</div>
+        <div class="dcard-facts">
+          <span>📌 Common in sun-exposed areas</span>
+          <span>🩺 Needs medical review</span>
+        </div>
+        <div style="margin-top:16px;text-align:center;">
+          <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="30" r="22" fill="#f4a460"/>
+            <circle cx="30" cy="22" r="7" fill="#f4a460"/><circle cx="50" cy="22" r="7" fill="#f4a460"/>
+            <circle cx="30" cy="22" r="4" fill="#e08030"/><circle cx="50" cy="22" r="4" fill="#e08030"/>
+            <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
+            <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
+            <path d="M33 27 Q36 24 39 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
+            <path d="M41 27 Q44 24 47 27" stroke="#2b2d42" stroke-width="1.5" fill="none"/>
+            <path d="M34 40 Q40 36 46 40" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--sky-d)" font-weight="800">Follow up soon</text>
           </svg>
         </div>
       </div>
 
       <!-- 3 -->
-      <div class="dcard reveal" style="border-color:#ffd6a0;" data-risk="monitor">
-        <div class="dcard-risk-bar" style="background:var(--peach);"></div>
+      <div class="dcard actinic reveal" data-risk="monitor">
+        <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji" style="font-size:52px;">☀️</span>
         <h3>Actinic Keratosis</h3>
-        <p>A rough, scaly patch caused by years of sun exposure. It's a <em>pre-cancerous</em> condition — not yet cancer, but it can become one if left untreated!</p>
-        <div class="dcard-tag" style="background:#fff3d0;color:var(--peach-d);">⚡ Pre-Cancerous</div>
+        <p>A rough, sun-damaged patch that can develop into cancer over time. SkinGuard suggests monitoring it closely and arranging a medical check-up.</p>
+        <div class="dcard-tag">☀️ Follow-Up Recommended</div>
         <div class="dcard-facts">
           <span>🌞 Sun damage sign</span>
-          <span>🩺 Monitor closely</span>
+          <span>👁️ Monitor closely</span>
         </div>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
@@ -2288,73 +2673,21 @@ footer {
             <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
             <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
             <path d="M35 40 Q40 38 45 40" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--peach-d)" font-weight="800">Check soon!</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="#6f8f42" font-weight="800">Monitor closely</text>
           </svg>
         </div>
       </div>
 
       <!-- 4 -->
-      <div class="dcard reveal" style="border-color:#d0e8ff;" data-risk="monitor">
-        <div class="dcard-risk-bar" style="background:var(--sky-d);"></div>
-        <span class="dcard-emoji" style="font-size:52px;">🩸</span>
-        <h3>Vascular Lesion</h3>
-        <p>These are blood vessel abnormalities on the skin — like hemangiomas or port-wine stains. Usually harmless, but Tobi suggests a check to be safe!</p>
-        <div class="dcard-tag" style="background:#dff0ff;color:var(--sky-d);">🩺 Monitor Regularly</div>
-        <div class="dcard-facts">
-          <span>💉 Blood vessel related</span>
-          <span>🧸 Often harmless</span>
-        </div>
-        <div style="margin-top:16px;text-align:center;">
-          <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="30" r="22" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="7" fill="#f4a460"/><circle cx="50" cy="22" r="7" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="4" fill="#e08030"/><circle cx="50" cy="22" r="4" fill="#e08030"/>
-            <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
-            <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
-            <circle cx="37" cy="29.5" r="1.5" fill="white"/>
-            <path d="M35 39 Q40 43 45 39" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--sky-d)" font-weight="800">Keep watching!</text>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="dcard reveal" style="border-color:#d0ffe8;" data-risk="safe">
-        <div class="dcard-risk-bar" style="background:#20c97a;"></div>
-        <span class="dcard-emoji" style="font-size:52px;">🌿</span>
-        <h3>Dermatofibroma</h3>
-        <p>A small, benign skin growth that feels firm to the touch. Usually round, brownish, and totally harmless! Tobi gives a thumbs up but reminds you to check yearly.</p>
-        <div class="dcard-tag" style="background:#e0fff0;color:#1557e0;">🌿 Benign Growth</div>
-        <div class="dcard-facts">
-          <span>✅ Non-cancerous</span>
-          <span>📅 Annual check ok</span>
-        </div>
-        <div style="margin-top:16px;text-align:center;">
-          <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="30" r="22" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="7" fill="#f4a460"/><circle cx="50" cy="22" r="7" fill="#f4a460"/>
-            <circle cx="30" cy="22" r="4" fill="#e08030"/><circle cx="50" cy="22" r="4" fill="#e08030"/>
-            <ellipse cx="40" cy="33" rx="15" ry="13" fill="#fcd5a0"/>
-            <circle cx="36" cy="31" r="3.5" fill="#2b2d42"/><circle cx="44" cy="31" r="3.5" fill="#2b2d42"/>
-            <circle cx="37" cy="29.5" r="1.5" fill="white"/><circle cx="45" cy="29.5" r="1.5" fill="white"/>
-            <path d="M33 39 Q40 46 47 39" stroke="#c06820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <ellipse cx="50" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="#1557e0" font-weight="800">Benign! ✅</text>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 6 -->
       <div class="dcard normal reveal" data-risk="safe">
         <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji">✅</span>
         <h3>Normal Mole</h3>
-        <p>Just a regular, harmless mole! Symmetrical edges, single color, smaller size. Tobi gives you a thumbs up and says you're looking good!</p>
-        <div class="dcard-tag">✅ You're Safe!</div>
+        <p>A typical mole is usually even in color and shape. SkinGuard labels this as low concern and reminds you to keep observing for changes over time.</p>
+        <div class="dcard-tag">✅ Low Concern</div>
         <div class="dcard-facts">
           <span>💚 Symmetrical shape</span>
-          <span>🎉 No action needed</span>
+          <span>📝 Keep monitoring</span>
         </div>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
@@ -2367,7 +2700,7 @@ footer {
             <path d="M33 39 Q40 46 47 39" stroke="#c06820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
             <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
             <ellipse cx="50" cy="36" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--mint-d)" font-weight="800">You're safe! 🎉</text>
+            <text x="40" y="56" text-anchor="middle" font-size="9" font-family="Poppins,sans-serif" fill="var(--dark)" font-weight="800">Keep monitoring</text>
           </svg>
         </div>
       </div>
@@ -2375,9 +2708,9 @@ footer {
 
     <!-- interactive risk legend -->
     <div class="risk-legend reveal">
-      <div class="rl-item danger"><span>🚨</span> Dangerous — See doctor immediately</div>
-      <div class="rl-item monitor"><span>👁️</span> Monitor — Schedule a check-up</div>
-      <div class="rl-item safe"><span>✅</span> Safe — Low risk, yearly check ok</div>
+      <div class="rl-item danger"><span>🚨</span> Dangerous — Prompt medical follow-up</div>
+      <div class="rl-item monitor"><span>👁️</span> Monitor — Observe and plan a check-up</div>
+      <div class="rl-item safe"><span>✅</span> Safe — Low concern, keep monitoring</div>
     </div>
   </div>
 </section>
@@ -2453,49 +2786,35 @@ footer {
       <div>
         <div class="section-chip reveal">🐻 Meet Tobi!</div>
         <h2 class="section-title reveal" style="color:white;">Your Friendly<br>AI Guide! 🌟</h2>
-        <p class="section-body reveal">Tobi the bear doesn't just show results — he explains them in a way everyone can understand! Here's what Tobi says for each result:</p>
+        <p class="section-body reveal">Tobi the bear does more than show a label. He explains each result in a simple way and gives some recommendations for the next step.</p>
 
         <div class="tobi-speech-list">
-          <div class="speech-bubble reveal">
-            <span class="speech-icon">⚠️</span>
-            <div class="speech-text">
-              <strong>Carcinoma:</strong><br>
-              Tobi says "⚕️ Classified as Carcinoma — Please seek medical consultation immediately!"
-            </div>
-          </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">🚨</span>
             <div class="speech-text">
               <strong>Melanoma:</strong><br>
-              Tobi alerts "HIGH-RISK! This is serious — please see a doctor right away!"
+              Tobi warns "This looks high priority. Please ask an adult or a healthcare professional for follow-up soon."
+            </div>
+          </div>
+          <div class="speech-bubble reveal">
+            <span class="speech-icon">⚠️</span>
+            <div class="speech-text">
+              <strong>Carcinoma:</strong><br>
+              Tobi says "This result needs closer attention, so I recommend arranging medical consultation."
             </div>
           </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">⚡</span>
             <div class="speech-text">
               <strong>Actinic Keratosis:</strong><br>
-              Tobi says "Pre-cancerous signs detected — schedule a dermatologist check-up soon!"
-            </div>
-          </div>
-          <div class="speech-bubble reveal">
-            <span class="speech-icon">🔵</span>
-            <div class="speech-text">
-              <strong>Vascular Lesion:</strong><br>
-              Tobi says "Blood vessel mark detected — likely harmless, but worth monitoring regularly!"
-            </div>
-          </div>
-          <div class="speech-bubble reveal">
-            <span class="speech-icon">🟩</span>
-            <div class="speech-text">
-              <strong>Dermatofibroma:</strong><br>
-              Tobi cheers "Benign growth! Nothing to worry about — do a yearly check to be safe! ✅"
+              Tobi says "This may be linked to long-term sun damage. Keep watching it and plan a skin check-up."
             </div>
           </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">✅</span>
             <div class="speech-text">
               <strong>Normal Mole:</strong><br>
-              Tobi cheers "Classified as a Normal Mole — No suspicious signs detected! You're good! 🎉"
+              Tobi says "This looks like a normal mole. Keep monitoring it and recheck if anything changes."
             </div>
           </div>
         </div>
@@ -2554,42 +2873,29 @@ footer {
           </div>
         </div>
 
-        <!-- If Carcinoma -->
-        <div class="block-group">
-          <div class="block b-if">
-            <span class="b-icon">🔀</span> if <span class="b-val">class</span> = <span class="b-str">"Carcinoma"</span> then
-          </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#7c4dff;">
-            <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Carcinoma detected!"</span>
-          </div>
-          <div class="block b-action" style="margin-left:24px;background:#fde8ee;color:#8f2340;border-left-color:#c43d63;">
-            <span class="b-icon">🏥</span> show <strong>Seek Doctor</strong> button
-          </div>
-        </div>
-
         <!-- If Melanoma -->
         <div class="block-group">
-          <div class="block b-elif">
-            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Melanoma"</span> then
+          <div class="block b-if">
+            <span class="b-icon">🔀</span> if <span class="b-val">class</span> = <span class="b-str">"Melanoma"</span> then
           </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#c3adf5;">
-            <span class="b-icon">🚨</span> Tobi alerts <span class="b-str">"HIGH RISK!"</span>
+          <div class="block b-say" style="margin-left:24px;border-left-color:#d7b66c;">
+            <span class="b-icon">🚨</span> Tobi warns <span class="b-str">"High-priority pattern detected!"</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#f0e8ff;color:#5d3295;border-left-color:#8d61cf;">
-            <span class="b-icon">🔔</span> play <strong>alarm sound</strong>
+          <div class="block b-action" style="margin-left:24px;background:#fff2cf;color:#9a7020;border-left-color:#d7b66c;">
+            <span class="b-icon">🏥</span> show <strong>Prompt Check</strong> button
           </div>
         </div>
 
-        <!-- If Normal -->
+        <!-- If Carcinoma -->
         <div class="block-group">
           <div class="block b-elif">
-            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Normal Mole"</span> then
+            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Carcinoma"</span> then
           </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#2979ff;">
-            <span class="b-icon">✅</span> Tobi cheers <span class="b-str">"You're safe! 🎉"</span>
+          <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
+            <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Closer follow-up recommended."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#e4eeff;color:#1e5ccf;border-left-color:#4b84ea;">
-            <span class="b-icon">🎊</span> play <strong>confetti animation</strong>
+          <div class="block b-action" style="margin-left:24px;background:#e8f2fa;color:#486b84;border-left-color:#7ea8c7;">
+            <span class="b-icon">📋</span> show <strong>Consultation</strong> card
           </div>
         </div>
 
@@ -2598,37 +2904,24 @@ footer {
           <div class="block b-elif">
             <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Actinic Keratosis"</span> then
           </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#00b0ff;">
-            <span class="b-icon">☀️</span> Tobi warns <span class="b-str">"Pre-cancerous sign! Schedule a check-up!"</span>
+          <div class="block b-say" style="margin-left:24px;border-left-color:#97b16f;">
+            <span class="b-icon">☀️</span> Tobi says <span class="b-str">"Monitor closely and plan a check-up."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#fff8e0;color:#8a6200;border-left-color:#d8a625;">
-            <span class="b-icon">📋</span> show <strong>Book Appointment</strong> button
-          </div>
-        </div>
-
-        <!-- If Vascular Lesion -->
-        <div class="block-group">
-          <div class="block b-elif">
-            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Vascular Lesion"</span> then
-          </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#67d4f8;">
-            <span class="b-icon">🩸</span> Tobi says <span class="b-str">"Blood vessel mark — monitor regularly!"</span>
-          </div>
-          <div class="block b-action" style="margin-left:24px;background:#dff0ff;color:#17648a;border-left-color:#3f9dcb;">
-            <span class="b-icon">📅</span> show <strong>Reminder</strong> calendar
+          <div class="block b-action" style="margin-left:24px;background:#edf6df;color:#6f8f42;border-left-color:#97b16f;">
+            <span class="b-icon">📝</span> show <strong>Recommendation</strong> card
           </div>
         </div>
 
-        <!-- If Dermatofibroma -->
+        <!-- If Normal Mole -->
         <div class="block-group">
           <div class="block b-elif">
-            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Dermatofibroma"</span> then
+            <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Normal Mole"</span> then
           </div>
-          <div class="block b-say" style="margin-left:24px;border-left-color:#20c97a;">
-            <span class="b-icon">🌿</span> Tobi cheers <span class="b-str">"Benign growth — yearly check is enough! ✅"</span>
+          <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
+            <span class="b-icon">✅</span> Tobi says <span class="b-str">"Looks like a normal mole."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#e0fff0;color:#16724c;border-left-color:#33af7b;">
-            <span class="b-icon">👍</span> play <strong>thumbs up animation</strong>
+          <div class="block b-action" style="margin-left:24px;background:#eef5fa;color:#4c6274;border-left-color:#7ea8c7;">
+            <span class="b-icon">👀</span> show <strong>Keep Monitoring</strong> note
           </div>
         </div>
 
@@ -2647,84 +2940,31 @@ footer {
 <section class="team-bg">
   <div class="section-inner">
     <div style="text-align:center;">
-      <div class="section-chip reveal" style="margin:0 auto 16px;color:white;">👫 Our Team</div>
+      <div class="section-chip reveal" style="margin:0 auto 16px;">👫 Our Team</div>
       <h2 class="section-title reveal">Meet the Young Innovators! 🌟</h2>
-      <p class="section-body reveal" style="margin:0 auto;">Three elementary school kids from Indonesia who dared to build an AI-powered health tool. That's pretty awesome! 💪</p>
+      <p class="section-body reveal" style="margin:0 auto;">The student team behind SkinGuard, each contributing to development, machine learning, and presentation.</p>
     </div>
 
     <div class="team-grid">
       <div class="team-card reveal">
-        <!-- team member SVG avatar -->
-        <div style="margin-bottom:16px;">
-          <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="45" cy="45" r="43" fill="#e4eeff"/>
-            <circle cx="45" cy="38" r="20" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="57" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="4" fill="#e08030"/>
-            <circle cx="57" cy="30" r="4" fill="#e08030"/>
-            <ellipse cx="45" cy="40" rx="14" ry="13" fill="#fcd5a0"/>
-            <circle cx="41" cy="38" r="3" fill="#2b2d42"/>
-            <circle cx="49" cy="38" r="3" fill="#2b2d42"/>
-            <path d="M40 47 Q45 52 50 47" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- glasses -->
-            <rect x="33" y="34" width="12" height="9" rx="5" fill="none" stroke="#5b9ee0" stroke-width="2"/>
-            <rect x="47" y="34" width="12" height="9" rx="5" fill="none" stroke="#5b9ee0" stroke-width="2"/>
-            <line x1="45" y1="38" x2="47" y2="38" stroke="#5b9ee0" stroke-width="2"/>
-            <!-- coat -->
-            <path d="M18 88 Q28 65 45 62 Q62 65 72 88" fill="#2979ff"/>
-          </svg>
-        </div>
+        <div class="team-photo team-photo-1" aria-label="Photo placeholder for Sanggatra Harsaya S"><span>SH</span></div>
+        <div class="team-meta">Team Leader</div>
         <h3>Sanggatra Harsaya S</h3>
-        <p class="role">🎨 Design & Presenter</p>
+        <p class="role">💻 Developer</p>
       </div>
 
       <div class="team-card reveal">
-        <div style="margin-bottom:16px;">
-          <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="45" cy="45" r="43" fill="#e8eeff"/>
-            <circle cx="45" cy="38" r="20" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="57" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="4" fill="#e08030"/>
-            <circle cx="57" cy="30" r="4" fill="#e08030"/>
-            <ellipse cx="45" cy="40" rx="14" ry="13" fill="#fcd5a0"/>
-            <circle cx="41" cy="38" r="3" fill="#2b2d42"/>
-            <circle cx="49" cy="38" r="3" fill="#2b2d42"/>
-            <ellipse cx="41" cy="37" rx="3.5" ry="2.5" fill="white" opacity="0.5"/>
-            <ellipse cx="49" cy="37" rx="3.5" ry="2.5" fill="white" opacity="0.5"/>
-            <path d="M40 47 Q45 53 50 47" stroke="#c06820" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <ellipse cx="38" cy="43" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.5"/>
-            <ellipse cx="52" cy="43" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.5"/>
-            <path d="M18 88 Q28 65 45 62 Q62 65 72 88" fill="#ff9f50"/>
-          </svg>
-        </div>
+        <div class="team-photo team-photo-2" aria-label="Photo placeholder for Elang Abimana M"><span>EA</span></div>
+        <div class="team-meta">Machine Learning</div>
         <h3>Elang Abimana M</h3>
-        <p class="role">💻 Team Leader & Developer</p>
+        <p class="role">🧠 ML Trainer & Researcher</p>
       </div>
 
       <div class="team-card reveal">
-        <div style="margin-bottom:16px;">
-          <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="45" cy="45" r="43" fill="#f0e8ff"/>
-            <circle cx="45" cy="38" r="20" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="57" cy="30" r="7" fill="#f4a460"/>
-            <circle cx="33" cy="30" r="4" fill="#e08030"/>
-            <circle cx="57" cy="30" r="4" fill="#e08030"/>
-            <ellipse cx="45" cy="40" rx="14" ry="13" fill="#fcd5a0"/>
-            <circle cx="41" cy="38" r="3" fill="#2b2d42"/>
-            <circle cx="49" cy="38" r="3" fill="#2b2d42"/>
-            <circle cx="42" cy="36.5" r="1.5" fill="white"/>
-            <circle cx="50" cy="36.5" r="1.5" fill="white"/>
-            <path d="M39 47 Q45 54 51 47" stroke="#c06820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <ellipse cx="38" cy="43" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <ellipse cx="52" cy="43" rx="5" ry="3.5" fill="#ffb0a0" opacity="0.6"/>
-            <path d="M18 88 Q28 65 45 62 Q62 65 72 88" fill="#c3adf5"/>
-          </svg>
-        </div>
+        <div class="team-photo team-photo-3" aria-label="Photo placeholder for Atharva Langit Sapta"><span>AL</span></div>
+        <div class="team-meta">Design & Presentation</div>
         <h3>Atharva Langit Sapta</h3>
-        <p class="role">🧠 ML Trainer & Researcher</p>
+        <p class="role">🎨 Design & Presenter</p>
       </div>
     </div>
 
@@ -2735,7 +2975,7 @@ footer {
           <h4>Embun Pagi Islamic School</h4>
           <p>Jakarta, Indonesia · Category Elementary</p>
         </div>
-        <div style="background:linear-gradient(135deg,#2979ff,#00b0ff);color:white;padding:8px 20px;border-radius:99px;font-size:12px;font-weight:800;margin-left:auto;">
+        <div style="background:linear-gradient(135deg,#bcd8ec,#d6e5bd);color:var(--dark);padding:8px 20px;border-radius:99px;font-size:12px;font-weight:800;margin-left:auto;">
           🏆 Codeavour 7.0
         </div>
       </div>
@@ -2786,8 +3026,9 @@ footer {
     </div>
 
     <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px;">
-      <a href="https://youtu.be/1dSFtQ6jrT8" target="_blank" class="btn btn-mint">▶ Watch Our Demo</a>
-      <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" target="_blank" class="btn btn-peach">🔗 Try SkinGuard!</a>
+      <a href="https://www.codeavour.org" target="_blank" class="btn btn-peach">🌍 Project Link</a>
+      <a href="https://youtu.be/1dSFtQ6jrT8" target="_blank" class="btn btn-mint">▶ Presentation Video</a>
+      <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" target="_blank" class="btn btn-sky">🔗 Demo Project</a>
     </div>
   </div>
 </section>
@@ -2795,13 +3036,13 @@ footer {
 <!-- ======== FOOTER ======== -->
 <footer>
   <div class="footer-brand">
-    <span class="s">Skin</span><span class="g">Guard</span> 🐻
+    <img src="assets/skinguard-logo.jpeg" alt="SkinGuard logo" class="footer-logo">
   </div>
   <p class="footer-sub">EPIS Overclock Team · Embun Pagi Islamic School · Codeavour 7.0 International</p>
   <div class="footer-links">
-    <a href="https://youtu.be/1dSFtQ6jrT8" class="footer-link" target="_blank">▶ Demo Video</a>
-    <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" class="footer-link" target="_blank">🔗 Live Project</a>
-    <a href="https://www.codeavour.org" class="footer-link" target="_blank">🌍 Codeavour.org</a>
+    <a href="https://www.codeavour.org" class="footer-link" target="_blank">🌍 Project Link</a>
+    <a href="https://youtu.be/1dSFtQ6jrT8" class="footer-link" target="_blank">▶ Presentation Video</a>
+    <a href="https://pictoblox.page.link/h5c3wf4qdJ2dF9BH6" class="footer-link" target="_blank">🔗 Demo Project</a>
   </div>
   <p style="margin-top:20px;font-size:12px;color:rgba(255,255,255,0.68);">Made with ❤️ by young innovators · "I Am A Young Innovator"</p>
 </footer>
@@ -2872,11 +3113,10 @@ document.addEventListener('mousemove', e => {
 });
 // ---- scan result cycling ----
 const scanResults = [
-  { label: '🔍 Benign Keratosis — Low Risk', conf: '89%', color: 'var(--mint)' },
-  { label: '⚠️ Melanoma Suspected — High Risk', conf: '76%', color: '#7c4dff' },
-  { label: '✅ Dermatofibroma — Benign', conf: '94%', color: '#67d4f8' },
-  { label: '🟡 Pigmented BCC — Moderate', conf: '82%', color: 'var(--peach)' },
-  { label: '✅ Vascular Lesion — Benign', conf: '91%', color: '#c3adf5' },
+  { label: '🚨 Melanoma — High Priority', conf: '92%', color: 'var(--peach-d)', border: 'rgba(215, 182, 108, 0.4)' },
+  { label: '⚠️ Carcinoma — Prompt Follow-Up', conf: '88%', color: 'var(--sky-d)', border: 'rgba(126, 168, 199, 0.4)' },
+  { label: '☀️ Actinic Keratosis — Monitor', conf: '84%', color: 'var(--mint-d)', border: 'rgba(151, 177, 111, 0.4)' },
+  { label: '✅ Normal Mole — Low Concern', conf: '95%', color: 'var(--dark)', border: 'rgba(126, 168, 199, 0.32)' },
 ];
 let scanIdx = 0;
 const scanEl = document.getElementById('scanResult');
@@ -2890,7 +3130,7 @@ if (scanEl) {
     setTimeout(() => {
       scanEl.textContent = r.label;
       scanEl.style.color = r.color;
-      scanEl.style.borderColor = r.color.replace('var(--mint)', 'rgba(41,121,255,0.4)');
+      scanEl.style.borderColor = r.border;
       renderEmojiImages(scanEl);
       if (confEl) confEl.textContent = r.conf;
       scanEl.style.opacity = '1';
