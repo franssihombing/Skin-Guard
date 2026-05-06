@@ -151,7 +151,7 @@ img.emoji-icon {
 
 /* ---- CONCLUSION BG ENHANCED ---- */
 .conclusion-bg {
-  background: linear-gradient(135deg, #020a22 0%, #071440 40%, #0a1e70 80%, #061228 100%) !important;
+  background: linear-gradient(135deg, #f7d992 0%, #fff2c9 28%, #eef6df 56%, #d5e7f4 82%, #bcd8ec 100%) !important;
 }
 .conclusion-inner {
   position: relative;
@@ -160,7 +160,7 @@ img.emoji-icon {
   content: '';
   position: absolute;
   width: 600px; height: 300px;
-  background: radial-gradient(ellipse, rgba(41,121,255,0.25) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(249,225,168,0.32) 0%, rgba(188,216,236,0.12) 45%, transparent 72%);
   top: -50px; left: 50%;
   transform: translateX(-50%);
   filter: blur(60px);
@@ -1366,27 +1366,28 @@ section { position: relative; z-index: 1; }
 
 /* ================ CONCLUSION ================ */
 .conclusion-bg {
-  background: linear-gradient(135deg, #020a22 0%, #071440 40%, #0a1860 100%);
+  background: linear-gradient(135deg, #f7d992 0%, #fff2c9 28%, #eef6df 56%, #d5e7f4 82%, #bcd8ec 100%);
   overflow: hidden;
   text-align: center;
 }
-.conclusion-bg .section-chip { background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.18); }
-.conclusion-bg .section-title { color: white; }
+.conclusion-bg .section-chip { background: linear-gradient(135deg, #f9e1a8, #d6e5bd, #bcd8ec); color: #35546b; border-color: rgba(126,168,199,0.24); }
+.conclusion-bg .section-title { color: var(--dark); }
 
 .conclusion-inner { max-width: 700px; margin: 0 auto; padding: 90px 40px; }
 
 .conclusion-quote {
-  background: rgba(255,255,255,0.1);
-  border: 3px solid rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(188,216,236,0.24));
+  border: 3px solid rgba(126,168,199,0.24);
   border-radius: 28px;
   padding: 48px 40px;
   margin: 48px 0;
   backdrop-filter: blur(20px);
+  box-shadow: 0 24px 48px rgba(90,114,130,0.14);
 }
 .conclusion-quote p {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(20px, 3vw, 28px);
-  color: white;
+  color: var(--dark);
   line-height: 1.5;
   font-style: normal;
 }
@@ -1394,7 +1395,7 @@ section { position: relative; z-index: 1; }
 .conclusion-tagline {
   font-size: 18px;
   font-weight: 800;
-  color: rgba(255,255,255,0.92);
+  color: var(--muted);
   margin-bottom: 36px;
 }
 
@@ -2467,41 +2468,44 @@ footer {
 </section>
 
 <!-- ======== WHAT PEOPLE NEED ======== -->
-<section style="background:linear-gradient(135deg,#0d1e50 0%,#0a1840 50%,#071230 100%);overflow:hidden;position:relative;">
+<section style="background:linear-gradient(135deg,#f7d992 0%,#fff2c9 28%,#eef6df 56%,#d5e7f4 82%,#bcd8ec 100%);overflow:hidden;position:relative;border-top:1px solid rgba(215,182,108,0.3);border-bottom:1px solid rgba(126,168,199,0.32);box-shadow:inset 0 18px 36px rgba(255,255,255,0.35), inset 0 -20px 40px rgba(126,168,199,0.12);">
   <div style="position:absolute;inset:0;pointer-events:none;">
-    <div style="position:absolute;width:500px;height:300px;background:radial-gradient(ellipse,rgba(41,121,255,0.2) 0%,transparent 70%);top:-50px;left:-100px;filter:blur(60px);"></div>
-    <div style="position:absolute;width:400px;height:300px;background:radial-gradient(ellipse,rgba(0,229,255,0.15) 0%,transparent 70%);bottom:0;right:-80px;filter:blur(60px);"></div>
+    <div style="position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,rgba(249,225,168,0),rgba(215,182,108,0.55),rgba(249,225,168,0));"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,rgba(188,216,236,0),rgba(126,168,199,0.52),rgba(188,216,236,0));"></div>
+    <div style="position:absolute;width:520px;height:320px;background:radial-gradient(ellipse,rgba(249,225,168,0.34) 0%,transparent 72%);top:-70px;left:-120px;filter:blur(60px);"></div>
+    <div style="position:absolute;width:520px;height:320px;background:radial-gradient(ellipse,rgba(188,216,236,0.38) 0%,transparent 72%);top:-40px;right:-120px;filter:blur(64px);"></div>
+    <div style="position:absolute;width:440px;height:280px;background:radial-gradient(ellipse,rgba(214,229,189,0.34) 0%,transparent 70%);bottom:-30px;left:28%;filter:blur(58px);"></div>
   </div>
   <div class="section-inner" style="position:relative;z-index:2;">
     <div style="text-align:center;margin-bottom:50px;">
       <div class="section-chip reveal" style="margin:0 auto 16px;">💡 What People Need</div>
-      <h2 class="section-title reveal" style="color:white;">Easy & Early Identification<br>of Suspicious Skin Conditions 🔍</h2>
-      <p class="section-body reveal" style="color:rgba(255,255,255,0.86);margin:0 auto;">This is where <strong style="color:#8ce8ff;">technology</strong> can play an important role...</p>
+      <h2 class="section-title reveal" style="color:var(--dark);">Easy & Early Identification<br>of Suspicious Skin Conditions 🔍</h2>
+      <p class="section-body reveal" style="color:var(--muted);margin:0 auto;">This is where <strong style="color:var(--sky-d);">technology</strong> can play an important role...</p>
     </div>
 
     <!-- big theme banner -->
-    <div class="reveal" style="background:linear-gradient(135deg,rgba(41,121,255,0.15),rgba(0,229,255,0.08));border:2px solid rgba(41,121,255,0.3);border-radius:28px;padding:40px;text-align:center;backdrop-filter:blur(10px);margin-bottom:48px;">
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(249,225,168,0.48));border:2px solid rgba(126,168,199,0.32);border-radius:28px;padding:40px;text-align:center;backdrop-filter:blur(10px);margin-bottom:48px;box-shadow:0 24px 48px rgba(90,114,130,0.16);">
       <div style="font-size:48px;margin-bottom:16px;">🌍🏥⚡</div>
-      <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;color:white;margin-bottom:12px;">Tech for Wellness, Equity for All</h3>
-      <p style="font-size:17px;color:rgba(255,255,255,0.88);line-height:1.8;max-width:680px;margin:0 auto;">This idea aligns with the Codeavour 7.0 theme — where technology is used to <strong style="color:#8ce8ff;">improve health awareness</strong> and provide <strong style="color:#8ce8ff;">equal access</strong> to preventive healthcare solutions for everyone.</p>
+      <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;color:var(--dark);margin-bottom:12px;">Tech for Wellness, Equity for All</h3>
+      <p style="font-size:17px;color:var(--muted);line-height:1.8;max-width:680px;margin:0 auto;">This idea aligns with the Codeavour 7.0 theme — where technology is used to <strong style="color:var(--sky-d);">improve health awareness</strong> and provide <strong style="color:var(--mint-d);">equal access</strong> to preventive healthcare solutions for everyone.</p>
     </div>
 
     <!-- 3 need cards -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
-      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(41,121,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+      <div class="reveal" style="background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(188,216,236,0.2));border:1px solid rgba(188,216,236,0.92);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;box-shadow:0 16px 34px rgba(90,114,130,0.12);">
         <div style="font-size:48px;margin-bottom:16px;">👀</div>
-        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Early Detection</h4>
-        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">People need tools to catch suspicious skin conditions as early as possible, before they become life-threatening.</p>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--dark);margin-bottom:10px;">Early Detection</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;">People need tools to catch suspicious skin conditions as early as possible, before they become life-threatening.</p>
       </div>
-      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(0,176,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+      <div class="reveal" style="background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(214,229,189,0.24));border:1px solid rgba(214,229,189,0.96);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;box-shadow:0 16px 34px rgba(90,114,130,0.12);">
         <div style="font-size:48px;margin-bottom:16px;">💰</div>
-        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Affordable Access</h4>
-        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">Not everyone can afford a dermatologist. A free, AI-powered tool removes economic barriers to healthcare screening.</p>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--dark);margin-bottom:10px;">Affordable Access</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;">Not everyone can afford a dermatologist. A free, AI-powered tool removes economic barriers to healthcare screening.</p>
       </div>
-      <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(124,77,255,0.3);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;">
+      <div class="reveal" style="background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(249,225,168,0.22));border:1px solid rgba(249,225,168,0.98);border-radius:24px;padding:28px;backdrop-filter:blur(10px);text-align:center;box-shadow:0 16px 34px rgba(90,114,130,0.12);">
         <div style="font-size:48px;margin-bottom:16px;">📱</div>
-        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:10px;">Simple to Use</h4>
-        <p style="font-size:14px;color:rgba(255,255,255,0.84);line-height:1.6;">Technology must be easy enough for anyone — young or old — to use without technical knowledge or special equipment.</p>
+        <h4 style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--dark);margin-bottom:10px;">Simple to Use</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;">Technology must be easy enough for anyone — young or old — to use without technical knowledge or special equipment.</p>
       </div>
     </div>
   </div>
@@ -3039,11 +3043,20 @@ footer {
 </section>
 
 <!-- ======== CONCLUSION ======== -->
-<section class="conclusion-bg">
-  <div class="conclusion-inner">
-    <div class="section-chip" style="margin:0 auto 16px;">🌟 Our Mission</div>
-    <h2 class="section-title reveal">Early Detection,<br>Smarter Protection! 🛡️</h2>
-    <p class="conclusion-tagline reveal">Tech for Wellness · Equity for All</p>
+<section class="conclusion-bg" style="background:linear-gradient(135deg,#f7d992 0%,#fff2c9 28%,#eef6df 56%,#d5e7f4 82%,#bcd8ec 100%);position:relative;border-top:1px solid rgba(215,182,108,0.3);border-bottom:1px solid rgba(126,168,199,0.32);box-shadow:inset 0 18px 36px rgba(255,255,255,0.35), inset 0 -20px 40px rgba(126,168,199,0.12);">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,rgba(249,225,168,0),rgba(215,182,108,0.55),rgba(249,225,168,0));"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,rgba(188,216,236,0),rgba(126,168,199,0.52),rgba(188,216,236,0));"></div>
+    <div style="position:absolute;width:520px;height:320px;background:radial-gradient(ellipse,rgba(249,225,168,0.34) 0%,transparent 72%);top:-70px;left:-120px;filter:blur(60px);"></div>
+    <div style="position:absolute;width:520px;height:320px;background:radial-gradient(ellipse,rgba(188,216,236,0.38) 0%,transparent 72%);top:-40px;right:-120px;filter:blur(64px);"></div>
+    <div style="position:absolute;width:440px;height:280px;background:radial-gradient(ellipse,rgba(214,229,189,0.34) 0%,transparent 70%);bottom:-30px;left:28%;filter:blur(58px);"></div>
+  </div>
+  <div class="conclusion-inner" style="position:relative;z-index:2;">
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(249,225,168,0.48));border:2px solid rgba(126,168,199,0.32);border-radius:28px;padding:40px;text-align:center;backdrop-filter:blur(10px);margin-bottom:48px;box-shadow:0 24px 48px rgba(90,114,130,0.16);">
+      <div class="section-chip" style="margin:0 auto 16px;background:linear-gradient(135deg,#f9e1a8,#d6e5bd,#bcd8ec) !important;color:#35546b !important;border:1px solid rgba(126,168,199,0.35);box-shadow:0 10px 24px rgba(126,168,199,0.18);">🌟 Our Mission</div>
+      <h2 class="section-title" style="color:var(--dark);margin-bottom:12px;">Early Detection,<br>Smarter Protection! 🛡️</h2>
+      <p class="conclusion-tagline" style="color:var(--muted);font-size:17px;line-height:1.8;font-weight:600;max-width:680px;margin:0 auto;">Tech for Wellness · Equity for All</p>
+    </div>
 
     <!-- tobi waving goodbye -->
     <div class="reveal" style="margin:20px 0;">
@@ -3076,8 +3089,8 @@ footer {
       </svg>
     </div>
 
-    <div class="conclusion-quote reveal">
-      <p>"By improving early awareness, this innovation encourages preventive healthcare and helps people make better decisions about their skin health." 🌱</p>
+    <div class="conclusion-quote reveal" style="background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(188,216,236,0.24));border-color:rgba(126,168,199,0.3);box-shadow:0 24px 48px rgba(90,114,130,0.14);">
+      <p style="color:var(--dark);">"By improving early awareness, this innovation encourages preventive healthcare and helps people make better decisions about their skin health." 🌱</p>
     </div>
 
     <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px;">
