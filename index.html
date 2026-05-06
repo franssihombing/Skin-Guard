@@ -1619,6 +1619,21 @@ footer {
   border-radius: 6px;
   font-family: monospace;
 }
+.block-light {
+  color: var(--dark) !important;
+}
+.block-light strong {
+  color: var(--dark);
+}
+.block-light .b-icon {
+  color: var(--dark);
+}
+.block-light .b-str,
+.block-light .b-val {
+  background: rgba(49, 70, 88, 0.1);
+  color: var(--dark);
+  border: 1px solid rgba(49, 70, 88, 0.16);
+}
 
 /* ================ RESPONSIVE ================ */
 @media (max-width: 860px) {
@@ -2968,7 +2983,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#d7b66c;">
             <span class="b-icon">🚨</span> Tobi warns <span class="b-str">"Please seek medical evaluation immediately."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#fff2cf;color:#9a7020;border-left-color:#d7b66c;">
+          <div class="block b-action block-light" style="margin-left:24px;background:#fff2cf;color:#9a7020;border-left-color:#d7b66c;">
             <span class="b-icon">🏥</span> show <strong>High Priority</strong> alert
           </div>
         </div>
@@ -2981,7 +2996,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
             <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Please consult a doctor/dermatologist."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#e8f2fa;color:#486b84;border-left-color:#7ea8c7;">
+          <div class="block b-action block-light" style="margin-left:24px;background:#e8f2fa;color:#486b84;border-left-color:#7ea8c7;">
             <span class="b-icon">📋</span> show note <span class="b-str">"Seek care sooner if there are rapid growth, bleeding or pain"</span>
           </div>
         </div>
@@ -2994,7 +3009,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#97b16f;">
             <span class="b-icon">☀️</span> Tobi says <span class="b-str">"Routine medical evaluation is recommended."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#edf6df;color:#6f8f42;border-left-color:#97b16f;">
+          <div class="block b-action block-light" style="margin-left:24px;background:#edf6df;color:#6f8f42;border-left-color:#97b16f;">
             <span class="b-icon">📝</span> show tip <span class="b-str">"Use sun protection"</span>
           </div>
         </div>
@@ -3007,7 +3022,7 @@ footer {
           <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
             <span class="b-icon">✅</span> Tobi says <span class="b-str">"Continue self-monitoring."</span>
           </div>
-          <div class="block b-action" style="margin-left:24px;background:#eef5fa;color:#4c6274;border-left-color:#7ea8c7;">
+          <div class="block b-action block-light" style="margin-left:24px;background:#eef5fa;color:#4c6274;border-left-color:#7ea8c7;">
             <span class="b-icon">👀</span> show tips <span class="b-str">"Consult if changes occur"</span> + <span class="b-str">"Maintain sun protection habits"</span>
           </div>
         </div>
