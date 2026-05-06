@@ -1017,9 +1017,10 @@ section { position: relative; z-index: 1; }
 
 .detect-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  margin-top: 52px;
+  max-width: 980px;
+  margin: 52px auto 0;
 }
 
 .dcard {
@@ -1224,6 +1225,18 @@ section { position: relative; z-index: 1; }
 .speech-icon { font-size: 28px; flex-shrink: 0; }
 .speech-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.6; }
 .speech-text strong { color: white; font-weight: 900; }
+.speech-reco {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.92);
+}
+.speech-reco li {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.speech-reco li + li {
+  margin-top: 4px;
+}
 
 /* tobi illustration */
 .tobi-visual-wrap { display: flex; justify-content: center; align-items: center; }
@@ -2254,21 +2267,21 @@ footer {
 
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-photo team-photo-1"><img src="/team-3.jpeg" alt=""></div>
+        <div class="team-photo team-photo-1"><img src="assets/team-3.jpeg" alt=""></div>
         <div class="team-meta">Team Leader</div>
         <h3>Elang Abimana M</h3>
         <p class="role">💻 Team Leader </p>
       </div>
 
       <div class="team-card reveal">
-        <div class="team-photo team-photo-2"><img src="/team-1.jpeg" alt=""></div>
+        <div class="team-photo team-photo-2"><img src="assets/team-1.jpeg" alt=""></div>
         <div class="team-meta">Machine Learning</div>
         <h3>Atharva Langit Sapta</h3>
         <p class="role">🧠 Developer Project </p>
       </div>
 
       <div class="team-card reveal">
-        <div class="team-photo team-photo-3"><img src="/team-2.jpeg" alt=""></div>
+        <div class="team-photo team-photo-3"><img src="assets/team-2.jpeg" alt=""></div>
         <div class="team-meta">Design & Presentation</div>
         <h3>Sanggatra Harsaya S</h3>
         <p class="role">🎨 Designer & Researcher Project </p>
@@ -2665,7 +2678,7 @@ footer {
     <div style="text-align:center;">
       <div class="section-chip reveal" style="margin:0 auto 16px;">🔍 Detection Types</div>
       <h2 class="section-title reveal">What Can SkinGuard Find? 🧬</h2>
-      <p class="section-body reveal" style="margin:0 auto;">SkinGuard is focused on <strong>4 priority categories</strong> of skin findings, each paired with a clear recommendation from Tobi.</p>
+      <p class="section-body reveal" style="margin:0 auto;">SkinGuard is focused on <strong>4 priority categories</strong> of skin findings, with a short explanation for each result.</p>
     </div>
 
     <!-- Risk filter tabs -->
@@ -2685,9 +2698,6 @@ footer {
         <div class="dcard-subtitle">Suspicious for melanoma</div>
         <div class="dcard-tag">High Priority</div>
         <p>A malignant skin tumor characterized by aggressive growth. Lesions commonly exhibit asymmetry, irregular borders, color variation, increasing diameter, or progressive changes over time.</p>
-        <ul class="dcard-list">
-          <li>Please seek medical evaluation immediately</li>
-        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2711,10 +2721,6 @@ footer {
         <div class="dcard-subtitle">Suspicious for skin carcinoma</div>
         <div class="dcard-tag">Prompt Check Recommended</div>
         <p>A malignant skin tumor, commonly basal cell carcinoma (BCC) or squamous cell carcinoma (SCC), associated with chronic UV exposure and presenting as persistent nodules, ulcerative lesions, or non-healing wounds.</p>
-        <ul class="dcard-list">
-          <li>Please consult a doctor/dermatologist</li>
-          <li>Seek care sooner if there are rapid growth, bleeding or pain</li>
-        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2738,10 +2744,6 @@ footer {
         <div class="dcard-subtitle">Suspicious for sun-related skin lesion (precancerous)</div>
         <div class="dcard-tag">Follow Up Recommended</div>
         <p>A precancerous keratinocytic lesion caused by ultraviolet (UV) radiation exposure, appears as rough, scaly, or hyperkeratotic patches on sun-exposed areas of the skin.</p>
-        <ul class="dcard-list">
-          <li>Routine medical evaluation is recommended</li>
-          <li>Use sun protection</li>
-        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2763,11 +2765,6 @@ footer {
         <div class="dcard-subtitle">No suspicious features detected (normal mole)</div>
         <div class="dcard-tag">Low Concern</div>
         <p>Normal moles are usually symmetrical, well-defined, uniformly pigmented, and stable in size and appearance over time.</p>
-        <ul class="dcard-list">
-          <li>Continue self-monitoring</li>
-          <li>Consult if changes occur</li>
-          <li>Maintain sun protection habits</li>
-        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2860,35 +2857,51 @@ footer {
       <div>
         <div class="section-chip reveal">🐻 Meet Tobi!</div>
         <h2 class="section-title reveal" style="color:white;">Your Friendly<br>AI Guide! 🌟</h2>
-        <p class="section-body reveal">Tobi the bear does more than show a label. He explains each result in a simple way and gives some recommendations for the next step.</p>
+        <p class="section-body reveal">Tobi helps translate each classification result into clear next-step recommendations that are easy to follow.</p>
 
         <div class="tobi-speech-list">
           <div class="speech-bubble reveal">
             <span class="speech-icon">🚨</span>
             <div class="speech-text">
               <strong>Melanoma:</strong><br>
-              Tobi warns "This looks high priority. Please ask an adult or a healthcare professional for follow-up soon."
+              Recommendation:
+              <ul class="speech-reco">
+                <li>Please seek medical evaluation immediately</li>
+              </ul>
             </div>
           </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">⚠️</span>
             <div class="speech-text">
               <strong>Carcinoma:</strong><br>
-              Tobi says "This result needs closer attention, so I recommend arranging medical consultation."
+              Recommendation:
+              <ul class="speech-reco">
+                <li>Please consult a doctor/dermatologist</li>
+                <li>Seek care sooner if there are rapid growth, bleeding or pain</li>
+              </ul>
             </div>
           </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">⚡</span>
             <div class="speech-text">
               <strong>Actinic Keratosis:</strong><br>
-              Tobi says "This may be linked to long-term sun damage. Keep watching it and plan a skin check-up."
+              Recommendation:
+              <ul class="speech-reco">
+                <li>Routine medical evaluation is recommended</li>
+                <li>Use sun protection</li>
+              </ul>
             </div>
           </div>
           <div class="speech-bubble reveal">
             <span class="speech-icon">✅</span>
             <div class="speech-text">
               <strong>Normal Mole:</strong><br>
-              Tobi says "This looks like a normal mole. Keep monitoring it and recheck if anything changes."
+              Recommendation:
+              <ul class="speech-reco">
+                <li>Continue self-monitoring</li>
+                <li>Consult if changes occur</li>
+                <li>Maintain sun protection habits</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -2953,10 +2966,10 @@ footer {
             <span class="b-icon">🔀</span> if <span class="b-val">class</span> = <span class="b-str">"Melanoma"</span> then
           </div>
           <div class="block b-say" style="margin-left:24px;border-left-color:#d7b66c;">
-            <span class="b-icon">🚨</span> Tobi warns <span class="b-str">"High-priority pattern detected!"</span>
+            <span class="b-icon">🚨</span> Tobi warns <span class="b-str">"Please seek medical evaluation immediately."</span>
           </div>
           <div class="block b-action" style="margin-left:24px;background:#fff2cf;color:#9a7020;border-left-color:#d7b66c;">
-            <span class="b-icon">🏥</span> show <strong>Prompt Check</strong> button
+            <span class="b-icon">🏥</span> show <strong>High Priority</strong> alert
           </div>
         </div>
 
@@ -2966,10 +2979,10 @@ footer {
             <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Carcinoma"</span> then
           </div>
           <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
-            <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Closer follow-up recommended."</span>
+            <span class="b-icon">⚠️</span> Tobi says <span class="b-str">"Please consult a doctor/dermatologist."</span>
           </div>
           <div class="block b-action" style="margin-left:24px;background:#e8f2fa;color:#486b84;border-left-color:#7ea8c7;">
-            <span class="b-icon">📋</span> show <strong>Consultation</strong> card
+            <span class="b-icon">📋</span> show note <span class="b-str">"Seek care sooner if there are rapid growth, bleeding or pain"</span>
           </div>
         </div>
 
@@ -2979,10 +2992,10 @@ footer {
             <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Actinic Keratosis"</span> then
           </div>
           <div class="block b-say" style="margin-left:24px;border-left-color:#97b16f;">
-            <span class="b-icon">☀️</span> Tobi says <span class="b-str">"Monitor closely and plan a check-up."</span>
+            <span class="b-icon">☀️</span> Tobi says <span class="b-str">"Routine medical evaluation is recommended."</span>
           </div>
           <div class="block b-action" style="margin-left:24px;background:#edf6df;color:#6f8f42;border-left-color:#97b16f;">
-            <span class="b-icon">📝</span> show <strong>Recommendation</strong> card
+            <span class="b-icon">📝</span> show tip <span class="b-str">"Use sun protection"</span>
           </div>
         </div>
 
@@ -2992,10 +3005,10 @@ footer {
             <span class="b-icon">🔀</span> else if <span class="b-val">class</span> = <span class="b-str">"Normal Mole"</span> then
           </div>
           <div class="block b-say" style="margin-left:24px;border-left-color:#7ea8c7;">
-            <span class="b-icon">✅</span> Tobi says <span class="b-str">"Looks like a normal mole."</span>
+            <span class="b-icon">✅</span> Tobi says <span class="b-str">"Continue self-monitoring."</span>
           </div>
           <div class="block b-action" style="margin-left:24px;background:#eef5fa;color:#4c6274;border-left-color:#7ea8c7;">
-            <span class="b-icon">👀</span> show <strong>Keep Monitoring</strong> note
+            <span class="b-icon">👀</span> show tips <span class="b-str">"Consult if changes occur"</span> + <span class="b-str">"Maintain sun protection habits"</span>
           </div>
         </div>
 
