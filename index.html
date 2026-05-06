@@ -1064,7 +1064,37 @@ section { position: relative; z-index: 1; }
 .dcard.melanoma h3  { color: #8860d0; }
 .dcard.normal h3    { color: var(--mint-d); }
 
-.dcard p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.dcard-subtitle {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.dcard p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 18px 0 18px;
+  text-align: left;
+}
+
+.dcard-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  text-align: left;
+  color: var(--dark);
+}
+
+.dcard-list li {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.dcard-list li + li {
+  margin-top: 6px;
+}
 
 .dcard-tag {
   display: inline-block;
@@ -1902,33 +1932,31 @@ body {
 }
 
 .team-photo {
-  width: 168px;
-  height: 168px;
+  width: 180px;
+  height: 224px;
   margin: 0 auto 18px;
-  border-radius: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 24px;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 100%);
 }
 
 .team-photo::before {
   content: '';
   position: absolute;
   inset: 12px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 2px solid rgba(255,255,255,0.55);
+  z-index: 1;
 }
 
-.team-photo span {
-  position: relative;
-  z-index: 1;
-  font-size: 42px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  color: rgba(49, 70, 88, 0.86);
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
 .team-photo-1 {
@@ -2052,7 +2080,7 @@ footer {
     <div class="hero-badge">🏆 Codeavour 7.0 International</div>
 
     <h1 class="hero-brand">
-      <img src="/skinguard-logo.jpeg" alt="SkinGuard logo" class="hero-logo">
+      <img src="assets/skinguard-logo.jpeg" alt="SkinGuard logo" class="hero-logo">
     </h1>
     <p class="hero-sub">🩺 Skin Cancer Classification System</p>
     <p class="hero-desc">SkinGuard is an AI-assisted screening website that classifies four skin condition categories and gives simple follow-up recommendations in language that is easy to understand.</p>
@@ -2607,12 +2635,12 @@ footer {
         <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji">🚨</span>
         <h3>Melanoma</h3>
-        <p>A dangerous skin cancer that can appear dark, uneven, and quickly changing. SkinGuard marks this as high priority and recommends prompt medical follow-up.</p>
-        <div class="dcard-tag">🔴 High Priority</div>
-        <div class="dcard-facts">
-          <span>🧬 Irregular borders</span>
-          <span>⏱ Needs prompt follow-up</span>
-        </div>
+        <div class="dcard-subtitle">Suspicious for melanoma</div>
+        <div class="dcard-tag">High Priority</div>
+        <p>A malignant skin tumor characterized by aggressive growth. Lesions commonly exhibit asymmetry, irregular borders, color variation, increasing diameter, or progressive changes over time.</p>
+        <ul class="dcard-list">
+          <li>Please seek medical evaluation immediately</li>
+        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2633,12 +2661,13 @@ footer {
         <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji">⚠️</span>
         <h3>Carcinoma</h3>
-        <p>Basal or squamous cell carcinoma may appear as a rough, scaly, or ulcerated patch. SkinGuard recommends prompt medical consultation for further evaluation.</p>
-        <div class="dcard-tag">⚕️ Prompt Check Recommended</div>
-        <div class="dcard-facts">
-          <span>📌 Common in sun-exposed areas</span>
-          <span>🩺 Needs medical review</span>
-        </div>
+        <div class="dcard-subtitle">Suspicious for skin carcinoma</div>
+        <div class="dcard-tag">Prompt Check Recommended</div>
+        <p>A malignant skin tumor, commonly basal cell carcinoma (BCC) or squamous cell carcinoma (SCC), associated with chronic UV exposure and presenting as persistent nodules, ulcerative lesions, or non-healing wounds.</p>
+        <ul class="dcard-list">
+          <li>Please consult a doctor/dermatologist</li>
+          <li>Seek care sooner if there are rapid growth, bleeding or pain</li>
+        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2659,12 +2688,13 @@ footer {
         <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji" style="font-size:52px;">☀️</span>
         <h3>Actinic Keratosis</h3>
-        <p>A rough, sun-damaged patch that can develop into cancer over time. SkinGuard suggests monitoring it closely and arranging a medical check-up.</p>
-        <div class="dcard-tag">☀️ Follow-Up Recommended</div>
-        <div class="dcard-facts">
-          <span>🌞 Sun damage sign</span>
-          <span>👁️ Monitor closely</span>
-        </div>
+        <div class="dcard-subtitle">Suspicious for sun-related skin lesion (precancerous)</div>
+        <div class="dcard-tag">Follow Up Recommended</div>
+        <p>A precancerous keratinocytic lesion caused by ultraviolet (UV) radiation exposure, appears as rough, scaly, or hyperkeratotic patches on sun-exposed areas of the skin.</p>
+        <ul class="dcard-list">
+          <li>Routine medical evaluation is recommended</li>
+          <li>Use sun protection</li>
+        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2683,12 +2713,14 @@ footer {
         <div class="dcard-risk-bar"></div>
         <span class="dcard-emoji">✅</span>
         <h3>Normal Mole</h3>
-        <p>A typical mole is usually even in color and shape. SkinGuard labels this as low concern and reminds you to keep observing for changes over time.</p>
-        <div class="dcard-tag">✅ Low Concern</div>
-        <div class="dcard-facts">
-          <span>💚 Symmetrical shape</span>
-          <span>📝 Keep monitoring</span>
-        </div>
+        <div class="dcard-subtitle">No suspicious features detected (normal mole)</div>
+        <div class="dcard-tag">Low Concern</div>
+        <p>Normal moles are usually symmetrical, well-defined, uniformly pigmented, and stable in size and appearance over time.</p>
+        <ul class="dcard-list">
+          <li>Continue self-monitoring</li>
+          <li>Consult if changes occur</li>
+          <li>Maintain sun protection habits</li>
+        </ul>
         <div style="margin-top:16px;text-align:center;">
           <svg width="72" height="56" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="30" r="22" fill="#f4a460"/>
@@ -2947,24 +2979,24 @@ footer {
 
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-photo team-photo-1" aria-label="Photo placeholder for Sanggatra Harsaya S"><span>SH</span></div>
+        <div class="team-photo team-photo-1"><img src="assets/team-3.jpeg" alt=""></div>
         <div class="team-meta">Team Leader</div>
-        <h3>Sanggatra Harsaya S</h3>
-        <p class="role">💻 Developer</p>
-      </div>
-
-      <div class="team-card reveal">
-        <div class="team-photo team-photo-2" aria-label="Photo placeholder for Elang Abimana M"><span>EA</span></div>
-        <div class="team-meta">Machine Learning</div>
         <h3>Elang Abimana M</h3>
-        <p class="role">🧠 ML Trainer & Researcher</p>
+        <p class="role">💻 Team Leader </p>
       </div>
 
       <div class="team-card reveal">
-        <div class="team-photo team-photo-3" aria-label="Photo placeholder for Atharva Langit Sapta"><span>AL</span></div>
+        <div class="team-photo team-photo-2"><img src="assets/team-2.jpeg" alt=""></div>
+        <div class="team-meta">Machine Learning</div>
+        <h3>Sanggatra Harsaya S</h3>
+        <p class="role">🎨 Design & Presenter</p>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-photo team-photo-3"><img src="assets/team-1.jpeg" alt=""></div>
         <div class="team-meta">Design & Presentation</div>
         <h3>Atharva Langit Sapta</h3>
-        <p class="role">🎨 Design & Presenter</p>
+        <p class="role">🧠 ML Trainer & Researcher </p>
       </div>
     </div>
 
