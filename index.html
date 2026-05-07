@@ -8,21 +8,21 @@
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <style>
 :root {
-  --mint:    #2979ff;
-  --mint-d:  #1557e0;
-  --sky:     #00b0ff;
-  --sky-d:   #0091ea;
-  --peach:   #00e5ff;
-  --peach-d: #00b8d4;
-  --rose:    #7c4dff;
-  --rose-d:  #651fff;
-  --lemon:   #40c4ff;
-  --lavender:#82b1ff;
-  --cream:   #f0f4ff;
+  --mint:    #b9d97e;
+  --mint-d:  #7ea34a;
+  --sky:     #9fcfeb;
+  --sky-d:   #5f98c5;
+  --peach:   #f7cf73;
+  --peach-d: #dd9f38;
+  --rose:    #f1b45d;
+  --rose-d:  #c8862e;
+  --lemon:   #ffe08f;
+  --lavender:#afd7ef;
+  --cream:   #fff9ee;
   --white:   #ffffff;
   --dark:    #0a0e1a;
   --text:    #1a2340;
-  --muted:   #42506f;
+  --muted:   #4f5f71;
   --ink-on-light: #14213d;
   --ink-on-dark: #ffffff;
   --card-r:  20px;
@@ -1729,11 +1729,11 @@ footer {
 }
 
 body {
-  background: linear-gradient(180deg, #fbf8ef 0%, #f6fbf0 45%, #eef5fa 100%);
+  background: linear-gradient(180deg, #fff9eb 0%, #f8fde9 42%, #eef8ff 100%);
 }
 
 .hero {
-  background: linear-gradient(145deg, #fbf0d2 0%, #eef7e0 45%, #dcecf7 100%);
+  background: linear-gradient(145deg, #ffe19b 0%, #e9f4c8 42%, #cde4f6 100%);
 }
 
 .hero::before {
@@ -1744,9 +1744,9 @@ body {
 
 .hero-badge {
   background: rgba(255,255,255,0.74);
-  border-color: rgba(126, 168, 199, 0.28);
+  border-color: rgba(95, 152, 197, 0.3);
   color: var(--dark);
-  box-shadow: 0 16px 32px rgba(126, 168, 199, 0.16);
+  box-shadow: 0 16px 32px rgba(95, 152, 197, 0.18);
 }
 
 .hero-badge::before {
@@ -1766,8 +1766,8 @@ body {
   align-items: center;
   padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.68);
-  border: 1px solid rgba(126, 168, 199, 0.24);
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(95, 152, 197, 0.22);
   color: var(--dark);
   font-size: 12px;
   font-weight: 800;
@@ -1807,13 +1807,13 @@ body {
 }
 
 .btn-mint {
-  background: linear-gradient(135deg, var(--peach), #f4d38a) !important;
+  background: linear-gradient(135deg, #f8d36f, #f2b65c) !important;
   color: var(--dark) !important;
-  box-shadow: 0 6px 0 var(--peach-d), 0 14px 30px rgba(215, 182, 108, 0.28) !important;
+  box-shadow: 0 6px 0 var(--peach-d), 0 14px 30px rgba(221, 159, 56, 0.3) !important;
 }
 
 .btn-mint:hover {
-  box-shadow: 0 10px 0 var(--peach-d), 0 20px 40px rgba(215, 182, 108, 0.34) !important;
+  box-shadow: 0 10px 0 var(--peach-d), 0 20px 40px rgba(221, 159, 56, 0.38) !important;
 }
 
 .btn-peach {
@@ -1829,54 +1829,90 @@ body {
 }
 
 .btn-sky {
-  background: linear-gradient(135deg, var(--sky), #d7e8f5);
+  background: linear-gradient(135deg, #94c8e8, #c3e1f4);
   color: var(--dark);
-  box-shadow: 0 6px 0 var(--sky-d), 0 14px 30px rgba(126, 168, 199, 0.24);
+  box-shadow: 0 6px 0 var(--sky-d), 0 14px 30px rgba(95, 152, 197, 0.24);
 }
 
 .btn-sky:hover {
   transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 10px 0 var(--sky-d), 0 20px 40px rgba(126, 168, 199, 0.32);
+  box-shadow: 0 10px 0 var(--sky-d), 0 20px 40px rgba(95, 152, 197, 0.32);
 }
 
 .stat-pill {
-  background: rgba(255,255,255,0.72);
-  border-color: rgba(126, 168, 199, 0.22);
+  background: rgba(255,255,255,0.76);
+  border-color: rgba(95, 152, 197, 0.2);
 }
 
 .section-chip {
-  background: linear-gradient(135deg, var(--sky), var(--mint)) !important;
+  background: linear-gradient(135deg, #f7d06b 0%, #c7e091 50%, #9ecce8 100%) !important;
   color: var(--dark) !important;
-  box-shadow: 0 10px 24px rgba(126, 168, 199, 0.18);
+  box-shadow: 0 10px 24px rgba(95, 152, 197, 0.18);
 }
 
 .problem-bg,
 .tech-bg,
 .detect-bg {
-  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(246,251,240,0.72) 100%);
+  background: linear-gradient(180deg, rgba(255,248,228,0.9) 0%, rgba(243,251,231,0.9) 52%, rgba(236,246,253,0.94) 100%);
 }
 
 .solution-bg,
 .team-bg {
-  background: linear-gradient(180deg, #f8fcf2 0%, #eef5fa 100%);
+  background: linear-gradient(180deg, #fff9ed 0%, #f2fae6 48%, #ebf5fd 100%);
 }
 
 .how-bg {
-  background: linear-gradient(135deg, #bcd8ec 0%, #d6e5bd 100%);
+  background: linear-gradient(135deg, #a7d1ee 0%, #ffe6aa 46%, #cde39a 100%);
 }
 
 .tobi-bg {
-  background: linear-gradient(135deg, #87b1cf 0%, #9db97a 100%);
+  background: linear-gradient(135deg, #98c7e6 0%, #ffe1a0 48%, #bbd987 100%);
+}
+
+.tobi-bg .section-chip {
+  background: linear-gradient(135deg, #f7d06b 0%, #c7e091 50%, #9ecce8 100%) !important;
+  color: var(--dark) !important;
+  border-color: rgba(95, 152, 197, 0.24);
+}
+
+.tobi-bg .section-title {
+  color: var(--dark);
+}
+
+.tobi-bg .section-body {
+  color: var(--muted);
+}
+
+.speech-bubble {
+  background: rgba(255,255,255,0.74);
+  border: 2px solid rgba(95, 152, 197, 0.24);
+  box-shadow: 0 12px 24px rgba(95, 152, 197, 0.12);
+}
+
+.speech-bubble:hover {
+  background: rgba(255,255,255,0.92);
+}
+
+.speech-text {
+  color: var(--text);
+}
+
+.speech-text strong {
+  color: var(--dark);
+}
+
+.speech-reco {
+  color: var(--text);
 }
 
 .conclusion-bg {
-  background: linear-gradient(180deg, #fbf4df 0%, #eef5fa 100%);
+  background: linear-gradient(180deg, #fff5dc 0%, #f4fae7 48%, #ebf5fd 100%);
 }
 
 .dtab.active {
-  background: linear-gradient(135deg, var(--sky), var(--mint)) !important;
+  background: linear-gradient(135deg, #f7d06b 0%, #c7e091 50%, #9ecce8 100%) !important;
   border-color: var(--sky-d) !important;
-  box-shadow: 0 6px 18px rgba(126, 168, 199, 0.32) !important;
+  box-shadow: 0 6px 18px rgba(95, 152, 197, 0.28) !important;
 }
 
 .rl-item.safe {
@@ -1890,7 +1926,7 @@ body {
 .school-strip,
 .conclusion-card,
 .stat-pill {
-  border-color: rgba(126, 168, 199, 0.16);
+  border-color: rgba(95, 152, 197, 0.16);
 }
 
 .dcard.melanoma {
@@ -1912,7 +1948,7 @@ body {
 }
 
 .dcard.carcinoma {
-  border-color: rgba(126, 168, 199, 0.46);
+  border-color: rgba(95, 152, 197, 0.44);
 }
 
 .dcard.carcinoma::before,
@@ -1943,7 +1979,7 @@ body {
 }
 
 .dcard.normal {
-  border-color: rgba(126, 168, 199, 0.25);
+  border-color: rgba(95, 152, 197, 0.26);
 }
 
 .dcard.normal .dcard-tag {
@@ -2007,7 +2043,7 @@ body {
   margin-bottom: 10px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: #f0f6fb;
+  background: #eef7fd;
   color: var(--sky-d);
   font-size: 11px;
   font-weight: 800;
@@ -2025,9 +2061,9 @@ body {
 }
 
 .overlay-btn-primary {
-  background: linear-gradient(135deg, var(--peach), #f4d38a);
+  background: linear-gradient(135deg, #f8d36f, #f2b65c);
   color: var(--dark);
-  box-shadow: 0 6px 0 var(--peach-d), 0 10px 24px rgba(215, 182, 108, 0.26);
+  box-shadow: 0 6px 0 var(--peach-d), 0 10px 24px rgba(221, 159, 56, 0.28);
 }
 
 .footer-brand {
@@ -2045,7 +2081,7 @@ body {
 }
 
 footer {
-  background: linear-gradient(145deg, #7ea8c7 0%, #9fc2d9 42%, #9ab579 100%) !important;
+  background: linear-gradient(145deg, #97c7e9 0%, #f6d27d 46%, #b6d67e 100%) !important;
 }
 
 .footer-link {
